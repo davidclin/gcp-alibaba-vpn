@@ -141,12 +141,8 @@ entry and custom route entry.
 
 ## Topology
 
-Cloud VPN supports the following topologies:
+Cloud VPN supports the following topology with Alibaba Cloud VPN Gateway:
 
--  A site-to-site IPsec VPN tunnel configuration using 
-[Cloud Router](https://cloud.google.com/router/docs/)
-and providing dynamic routing with the
-[Border Gateway Protocol (BGP)](https://wikipedia.org/wiki/Border_Gateway_Protocol).
 -  A site-to-site IPsec VPN tunnel configuration using static routing.
 
 For detailed topology information, see the following resources:
