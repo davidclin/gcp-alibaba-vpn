@@ -70,7 +70,7 @@ Alibaba Cloud VPN Gateway.
     - [Configuring static routing](#configuring-static-routing)
     - [Saving the configuration](#saving-the-configuration)
     - [Testing the configuration](#testing-the-configuration)
-- [Troubleshooting IPsec on <vendor-name><product-name>](#troubleshooting-ipsec-on-vendor-nameproduct-name)
+- [Troubleshooting IPsec on Alibaba Cloud VPN Gateway](#troubleshooting-ipsec-on-alibaba-cloud-vpn-gateway)
 - [Reference documentation](#reference-documentation)
     - [GCP documentation](#gcp-documentation)
     - [Alibaba Cloud VPN Gateway documentation](#alibaba-cloud-vpn-gateway-documentation)
@@ -687,7 +687,7 @@ from a Cisco ASR router to GCP.>
     !!!!!
     Success rate is 100 percent (5/5), round-trip min/avg/max = 18/19/20 ms
 
-## Troubleshooting IPsec on <vendor-name><product-name>
+## Troubleshooting IPsec on Alibaba Cloud VPN Gateway
 
 For troubleshooting information, see the [Alibaba IPSec Connections Troubleshooting Guide](https://partners-intl.aliyun.com/help/doc-detail/65802.htm?spm=a2c63.o282931.b99.27.4973a641RT0hOX] and [View IPSec Connections Logs](https://www.alibabacloud.com/help/doc-detail/65288.htm?spm=5176.11182206.0.0.3c5b4c8f4JJqGH#h2-view-ipsec-connection-logs5).
 
