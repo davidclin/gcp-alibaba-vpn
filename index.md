@@ -651,19 +651,24 @@ Follow the procedure in this section to save the on-premises configuration.
 
 ### Testing the configuration
 
-It's important to test the VPN connection from both sides of a VPN tunnel. For either side, make sure that the subnet that a machine or virtual machine is located in is being forwarded through the VPN tunnel.
+It's important to test the VPN connection from both sides of a VPN tunnel. 
+For either side, make sure that the subnet that a machine or virtual machine 
+is located in is being forwarded through the VPN tunnel.
 
-First, create VMs on both sides of the tunnel. Make sure that you configure the
-VMs on a subnet that will pass traffic through the VPN tunnel.
+First, create virtual machines (VMs) on both sides of the tunnel. Make sure 
+that you configure the VMs on a subnet that will pass traffic through the VPN 
+tunnel.
 
 -  Instructions for creating virtual machines in Compute Engine are located
 in the 
 [Getting Started Guide](https://cloud.google.com/compute/docs/quickstart).
--  Instructions for creating virtual machine for <vendor-name><product-name>
-platforms are located at <link here>.
+-  Instructions for creating virtual machines in Alibaba Cloud Elastic Compute Service (ECS)
+are located at [ECS operation instructions](https://www.alibabacloud.com/help/doc-detail/25430.htm).
+Note, when creating an ECS instance, selectt Pay-as-You-Go for the billing method unless you
+intend to place the instance under the Subscription billing method.
 
-After VMs have been deployed on both the GCP and <vendor-name><product-name>
-platforms, you can use an ICMP echo (ping) test to test network connectivity
+After VMs have been deployed on both the GCP and Alibaba Cloud platforms, 
+you can use an ICMP echo (ping) test to test network connectivity
 through the VPN tunnel.
 
 On the GCP side, use the following instructions to test the connection to a
@@ -676,16 +681,6 @@ machine that's behind the on-premises gateway:
 command line.
 1. Ping a machine that's behind the on-premises gateway.
 
-<Insert any additional instructions for testing the VPN tunnels from the <vendor
-name><product-name> here. For example, below is an example of a successful ping
-from a Cisco ASR router to GCP.>
-
-    cisco-asr#ping 172.16.100.2 source 10.0.200.1
-    Type escape sequence to abort.
-    Sending 5, 100-byte ICMP Echos to 172.16.100.2, timeout is 2 seconds:
-    Packet sent with a source address of 10.0.200.1
-    !!!!!
-    Success rate is 100 percent (5/5), round-trip min/avg/max = 18/19/20 ms
 
 ## Troubleshooting IPsec on Alibaba Cloud VPN Gateway
 
