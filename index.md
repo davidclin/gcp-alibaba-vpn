@@ -73,7 +73,7 @@ Alibaba Cloud VPN Gateway.
 - [Troubleshooting IPsec on <vendor-name><product-name>](#troubleshooting-ipsec-on-vendor-nameproduct-name)
 - [Reference documentation](#reference-documentation)
     - [GCP documentation](#gcp-documentation)
-    - [<vendor-name><product-name> documentation](#vendor-nameproduct-name-documentation)
+    - [Alibaba Cloud VPN Gateway documentation](#alibaba-cloud-vpn-gateway-documentation)
 - [Appendix: Using gcloud commands](#appendix-using-gcloud-commands)
     - [Running gcloud commands](#running-gcloud-commands)
     - [Configuration parameters and values](#configuration-parameters-and-values)
@@ -710,8 +710,8 @@ To learn more about GCP networking, see the following documents:
 
 ### Alibaba Cloud VPN Gateway documentation
 
-For more product information on <vendor-name><product-name>, see the following
-<product-name> feature configuration guides and datasheets:
+For more product information on Alibaba Cloud VPN Gateway, see the following
+Alibaba Cloud VPN Gateway feature configuration guides and datasheets:
 
 -  [Alibaba VPN Gateway](https://www.alibabacloud.com/product/vpn-gateway)
 -  [Document Center: VPN Gateway](https://partners-intl.aliyun.com/help/product/65234.htm?spm=a2c63.m28257.a1.26.25cb4fca3Qi2Bv)
