@@ -108,9 +108,7 @@ For more information about Cloud VPN, see the
 
 Below are definitions of terms used throughout this guide.
 
-<This is some sample terminology. Add any terminology to this section that needs
-explanation.>
-
+**GCP Terminology**
 -  **GCP VPC network**—A single virtual network within a single GCP project.
 -  **On-premises gateway**—The VPN device on the non-GCP side of the
 connection, which is usually a device in a physical data center or in
@@ -121,10 +119,31 @@ gateway that's connecting _to_ GCP.
 within a GCP project that exists at the edge of the GCP network.
 -  **Static routing**—Manually specifying the route to subnets on the GCP
 side and to the on-premises side of the VPN gateway.
--  **Dynamic routing**—GCP dynamic routing for VPN using the
-[Border Gateway Protocol (BGP)](https://wikipedia.org/wiki/Border_Gateway_Protocol).
--  <<vendor-name><product-name> term>
--  <<vendor-name><product-name> term>
+
+**Alibaba Cloud Terminology**
+-  **Alibaba Cloud VPC**-A private network established in Alibaba Cloud. VPCs 
+are logically isolated from other virtual networks in Alibaba Cloud. VPCs allow 
+you to launch and use Alibaba Cloud resources in your VPC.
+-  **Alibaba Cloud VSwitch**-A VSwitch is a basic network device of a VPC and 
+used to connect different cloud product instances. When creating a cloud product 
+instance in a VPC, you must specify the VSwitch that the instance is located.
+-  **Alibaba Cloud Zone**-Zones are physical areas with independent power grids 
+and networks in one region. Alibaba recommends creating different VSwitches in 
+different zones to achieve disaster Recovery.
+-  **Alibaba Cloud VPN Gateway**-The VPN gateway is the IPsec VPN gateway created 
+on the Alibaba Cloud side. One VPN gateway can have multiple VPN connections.
+-  **Alibaba Cloud Customer Gateway**-The customer gateway is the VPN service 
+deployed in the on-premises data Center or, in this case, the GCP Cloud VPN gateway. 
+By creating a customer gateway, you can register the VPN information to the cloud, 
+and then create a VPN connection to connect the VPN gateway and the customer gateway.
+-  **Alibaba Cloud VRouter**-A VRouter is a hub in the VPC that connects all 
+VSwitches in the VPC and serves as a gateway device that connects the VPC to 
+other networks. VRouter routes the network traffic according to the configurations 
+of route entries.
+-  **Alibaba Cloud Route Entry**-A route entry specifies the next hop address for the 
+network traffic destined to a CIDR block. It has two types of entries: system route 
+entry and custom route entry.
+-  **Alibaba Cloud Route Table**-A route table is a list of route entries in a VRouter.
 
 ## Topology
 
