@@ -689,7 +689,7 @@ from a Cisco ASR router to GCP.>
 
 ## Troubleshooting IPsec on Alibaba Cloud VPN Gateway
 
-For troubleshooting information, see the [Alibaba IPSec Connections Troubleshooting Guide](https://partners-intl.aliyun.com/help/doc-detail/65802.htm?spm=a2c63.o282931.b99.27.4973a641RT0hOX] and [View IPSec Connections Logs](https://www.alibabacloud.com/help/doc-detail/65288.htm?spm=5176.11182206.0.0.3c5b4c8f4JJqGH#h2-view-ipsec-connection-logs5).
+For troubleshooting information, see the [Alibaba IPSec Connections Troubleshooting Guide](https://partners-intl.aliyun.com/help/doc-detail/65802.htm?spm=a2c63.o282931.b99.27.4973a641RT0hOX) and [View IPSec Connections Logs](https://www.alibabacloud.com/help/doc-detail/65288.htm?spm=5176.11182206.0.0.3c5b4c8f4JJqGH#h2-view-ipsec-connection-logs5).
 
 
 ## Reference documentation
