@@ -94,8 +94,12 @@ Author: <author name and email address>
 ## Introduction
 
 This guide walks you through the process of configuring
-<vendor-name><product-name> for integration with the
+Alibaba Cloud VPN Gateway for integration with the
 [Cloud VPN service](https://cloud.google.com/vpn/docs) on GCP.
+
+If you are using this guide to configure your Alibaba Cloud VPN
+Gateway implementation, be sure to substitute the correct IP
+information for your environment.
 
 For more information about Cloud VPN, see the
 [Cloud VPN Overview](https://cloud.google.com/compute/docs/vpn/overview).
