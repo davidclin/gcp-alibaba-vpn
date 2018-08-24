@@ -660,12 +660,11 @@ that you configure the VMs on a subnet that will pass traffic through the VPN
 tunnel.
 
 -  Instructions for creating virtual machines in Compute Engine are located
-in the 
-[Getting Started Guide](https://cloud.google.com/compute/docs/quickstart).
+in the [Getting Started Guide](https://cloud.google.com/compute/docs/quickstart).
 -  Instructions for creating virtual machines in Alibaba Cloud Elastic Compute Service (ECS)
 are located at [ECS operation instructions](https://www.alibabacloud.com/help/doc-detail/25430.htm).
-Note, when creating an ECS instance, selectt Pay-as-You-Go for the billing method unless you
-intend to place the instance under the Subscription billing method.
+(Note: When creating an ECS instance, select **Pay-as-You-Go** for the billing method unless you
+intend to place the instance under the **Subscription** billing method.)
 
 After VMs have been deployed on both the GCP and Alibaba Cloud platforms, 
 you can use an ICMP echo (ping) test to test network connectivity
