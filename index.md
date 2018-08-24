@@ -89,7 +89,7 @@ _Disclaimer: This interoperability guide is intended to be informational in
 nature and shows examples only. Customers should verify this information by
 testing it._
 
-Author: <author name and email address>
+Author: cloudservices-gcp-support@eplus.com
 
 ## Introduction
 
