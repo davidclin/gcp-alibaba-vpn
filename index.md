@@ -120,7 +120,7 @@ within a GCP project that exists at the edge of the GCP network.
 -  **Static routing**—Manually specifying the route to subnets on the GCP
 side and to the on-premises side of the VPN gateway.
 
-**Alibaba Cloud Terminology**
+**Alibaba Terminology**
 -  **Alibaba Cloud VPC**-A private network established in Alibaba Cloud. VPCs 
 are logically isolated from other virtual networks in Alibaba Cloud. VPCs allow 
 you to launch and use Alibaba Cloud resources in your VPC.
