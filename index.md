@@ -166,22 +166,10 @@ Disclaimer: At time of this writing, site-to-site IPsec VPN tunnel configuration
 
 ## Product environment
 
-The <vendor-name><product-name> equipment used in this guide is as follows:
+The on-premise VPN gateway used in this guide is as follows:
 
--  Vendor—<vendor-name>
--  Model—<model name>
--  Software release—<full software release name>
-
-<Fill in the following if the vendor supports more than one platform. However,
-the following section is optional, because some vendors might only have one
-platform.>
-
-Although the steps in this guide use <model name>, this guide also applies to
-the following <product-name> platforms:
-
--  <vendor model 1>
--  <vendor model 2>
--  <vendor model 3>
+-  Vendor—Alibaba Cloud
+-  Service—VPN Gateway
 
 ## Before you begin
 
