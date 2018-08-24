@@ -46,7 +46,7 @@ Alibaba Cloud VPN Gateway.
 - [Before you begin](#before-you-begin)
     - [GCP account and project](#gcp-account-and-project)
     - [Permissions](#permissions)
-    - [Licenses and modules](#licenses-and-modules)
+    - [IP Ranges](#ip-ranges)
  - [Configure the GCP side](#configure-the-gcp-side)
     - [Initial tasks](#initial-tasks)
         - [Select a GCP project name](#select-a-gcp-project-name)
@@ -194,26 +194,9 @@ permissions. For details, see
 in the article
 [Creating a VPN Tunnel using Dynamic Routing](https://cloud.google.com/vpn/docs/how-to/creating-vpn-dynamic-routes).
 
-### Licenses and modules
+### IP Ranges
 
-<This section is optional, because some VPN vendors can be open source or cloud
-providers that don't require licensing>
-
-Before you configure your <vendor-name><product-name> for use with Cloud VPN,
-make sure that the following licenses are available:
-
-<Below are some examples. Replace with information that applies to the
-product>
-
--  Advanced Enterprise Services (SLASR1-AES) or Advanced IP Services
-Technology Package License (SLASR1-AIS).
--  IPsec RTU license (FLASR1-IPsec-RTU).
--  Encryption HW module (ASR1002HX-IPsecHW(=) and ASR1001HX-IPsecW(=)) and
-Tiered Crypto throughput license, which applies to ASR1002-HX and ASR1001-HX
-chassis only.
-
-<For detailed <vendor-name><product-name> license information, see the
-<Vendor-Guide-link> documentation.>
+The IP address ranges of the GCP VPC and the Alibaba VPC must not overlap.
 
 ## Configure the GCP side
 
