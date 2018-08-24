@@ -49,16 +49,8 @@ Alibaba Cloud VPN Gateway.
     - [IP Ranges](#ip-ranges)
  - [Configuration Overview](#configuration-overview)
     - [Alibaba Cloud VPC, VSwitch, and VPN Gateway configuration](#alibaba-cloud-vpc-vswitch-and-vpn-gateway-configuration)
-        - [Create Alibaba Cloud VPC](#create-alibaba-cloud-vpc)
-        - [Create Alibaba Cloud VSwitch](#create-alibaba-cloud-vswitch)
-        - [Create Alibaba Cloud VPN Gateway](#create_alibaba-cloud-vpn-gateway)
-    - [GCP Configuration](#gcp-configuration)
-        - [Create GCP VPC network](#create-gcp-vpc-network)
-        - [Create GCP VPN Gateway](#create-gcp-vpn-gateway)
+    - [GCP configuration](#gcp-configuration)
     - [Alibaba Cloud Customer Gateway and IPSec Connection configuration](#alibaba-cloud-customer-gateway-and-ipsec-connection-configuration)
-        - [Create Alibaba Cloud Customer Gateway](#create-alibaba-cloud-customer-gateway)
-        - [Create IPSec Connection](#create-ipsec-connection)
-        - [Configure static route entry](#configure-static-route-entry)
  - [Configure the GCP side](#configure-the-gcp-side)
     - [Initial tasks](#initial-tasks)
         - [Select a GCP project name](#select-a-gcp-project-name)
@@ -195,6 +187,24 @@ permissions. For details, see
 [Required Permissions](https://cloud.google.com/vpn/docs/how-to/creating-vpn-dynamic-routes#required_permissions)
 in the article
 [Creating a VPN Tunnel using Dynamic Routing](https://cloud.google.com/vpn/docs/how-to/creating-vpn-dynamic-routes).
+
+## Configuration Overview
+
+The Google Cloud VPN with Alibaba Cloud VPN Gateway configuration is comprised of the following steps.
+The order of these steps is important and will yield faster results when performed as instructed. 
+
+### Step 1: Alibaba Cloud VPC, VSwitch, and VPN Gateway configuration
+1. Create Alibaba Cloud VPC
+1. Create Alibaba Cloud VSwitch
+1. Create Alibaba Cloud Gateway
+### Step 2: GCP Configuration
+1. Create GCP VPC network
+1. Create GCP VPN Gateway
+### Step 3: Alibaba Cloud Customer Gateway and IPSec Connection configuration
+1. Create Alibaba Cloud Customer Gateway
+1. Create IPSec Connection
+1. Configure static route entry
+
 
 ### IP Ranges
 
