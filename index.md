@@ -188,6 +188,11 @@ permissions. For details, see
 in the article
 [Creating a VPN Tunnel using Dynamic Routing](https://cloud.google.com/vpn/docs/how-to/creating-vpn-dynamic-routes).
 
+### IP Ranges
+
+The IP address ranges of the GCP VPC and the Alibaba VPC must not overlap.
+
+
 ## Configuration Overview
 
 The Google Cloud VPN with Alibaba Cloud VPN Gateway configuration is comprised of the following steps.
@@ -205,10 +210,6 @@ The order of these steps is important and will yield faster results when perform
 1. Create IPSec Connection
 1. Configure static route entry
 
-
-### IP Ranges
-
-The IP address ranges of the GCP VPC and the Alibaba VPC must not overlap.
 
 ## Configure the GCP side
 
