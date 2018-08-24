@@ -689,16 +689,12 @@ from a Cisco ASR router to GCP.>
 
 ## Troubleshooting IPsec on <vendor-name><product-name>
 
-For troubleshooting information, see the <vendor-name><product-name>
-troubleshooting guide <add link>.
-
-<Add details here about what kind of troubleshooting information can be found in
-the <vendor-name><product-name> guide.>
+For troubleshooting information, see the [Alibaba IPSec Connections Troubleshooting Guide](https://partners-intl.aliyun.com/help/doc-detail/65802.htm?spm=a2c63.o282931.b99.27.4973a641RT0hOX] and [View IPSec Connections Logs](https://www.alibabacloud.com/help/doc-detail/65288.htm?spm=5176.11182206.0.0.3c5b4c8f4JJqGH#h2-view-ipsec-connection-logs5).
 
 
 ## Reference documentation
 
-You can refer to the following <vendor-name><product-name> documentation and
+You can refer to the following Alibaba Cloud VPN Gateway documentation and
 Cloud VPN documentation for additional information about both products.
 
 ### GCP documentation
@@ -712,19 +708,16 @@ To learn more about GCP networking, see the following documents:
 -  [Advanced Cloud VPN Configurations](https://cloud.google.com/vpn/docs/concepts/advanced)
 -  [Troubleshooting Cloud VPN](https://cloud.google.com/compute/docs/vpn/troubleshooting)
 
-### <vendor-name><product-name> documentation
+### Alibaba Cloud VPN Gateway documentation
 
 For more product information on <vendor-name><product-name>, see the following
 <product-name> feature configuration guides and datasheets:
 
--  <guide name>
--  <guide name>
+-  [Alibaba VPN Gateway](https://www.alibabacloud.com/product/vpn-gateway)
+-  [Document Center: VPN Gateway](https://partners-intl.aliyun.com/help/product/65234.htm?spm=a2c63.m28257.a1.26.25cb4fca3Qi2Bv)
+-  [Configure a Site-to-Site VPN](https://partners-intl.aliyun.com/help/doc-detail/65072.htm?spm=a2c63.l28256.a3.7.13b5e889MWMzAE)
+-  [Alibaba Cloud Region and Endpoint Names](https://www.alibabacloud.com/help/doc-detail/31837.htm)
 
-For common <vendor-name><product-name> error messages and debug commands, see
-the following guides:
-
--  <guide name>
--  <guide name>
 
 ## Appendix: Using gcloud commands
 
