@@ -56,16 +56,10 @@ Alibaba Cloud VPN Gateway.
         - [Configure the VPN gateway](#configure-the-vpn-gateway)
         - [Configure firewall rules](#configure-firewall-rules)
     - [Configuring route-based IPsec VPN using static routing](#configuring-route-based-ipsec-vpn-using-static-routing)
-- [Configure the <vendor-name><vendor product> side](#configure-the-vendor-namevendor-product-side)
+- [Configure the Alibaba Cloud VPN Gateway side](#configure-the-alibaba-cloud-vpn-gateway)
     - [Creating the base network configuration](#creating-the-base-network-configuration)
     - [Creating the base VPN gateway configuration](#creating-the-base-vpn-gateway-configuration)
     - [GCP-compatible settings for IPSec and IKE](#gcp-compatible-settings-for-ipsec-and-ike)
-        - [Configure the IKE proposal and policy](#configure-the-ike-proposal-and-policy)
-        - [Configure the IKEv2 keyring](#configure-the-ikev2-keyring)
-        - [Configure the IKEv2 profile](#configure-the-ikev2-profile)
-        - [Configure the IPsec security association (SA)](#configure-the-ipsec-security-association-sa)
-        - [Configure the IPsec transform set](#configure-the-ipsec-transform-set)
-        - [Configure the IPsec static virtual tunnel interface (SVTI)](#configure-the-ipsec-static-virtual-tunnel-interface-svti)
     - [Configuring the dynamic routing protocol](#configuring-the-dynamic-routing-protocol)
     - [Configuring static routing](#configuring-static-routing)
     - [Saving the configuration](#saving-the-configuration)
@@ -512,22 +506,10 @@ connection if it drops)</td>
 </tr>
 <tr>
 <td>IKE ciphers</td>
-<td><code>aes</code> (default), aes192, aes256, des, 3des (For details about IKE ciphers for IKEv1 or IKEv2 supported by GCP,
+<td><code>aes</code> (default), aes192, aes256, des, 3des <br>(For details about IKE ciphers for IKEv1 or IKEv2 supported by GCP,
 including the additional ciphers for PFS, see <a
 href="https://cloud.google.com/vpn/docs/concepts/supported-ike-ciphers">Supported
 IKE Ciphers</a>).</td>
-</tr>
-<tr>
-<td>Integrity</td>
-<td><code>sha1</code> (default), md5</td>
-</tr>
-<tr>
-<td>Diffie-Hellman (DH)</td>
-<td>group1, <code>group2</code> (default), group5, group14, group24</td>
-</tr>
-<tr>
-<td>Lifetime/SA Life Cycles</td>
-    <td><code>86400 seconds</code> (default)</td>
 </tr>
 </tbody>
 </table>
@@ -537,63 +519,11 @@ IKE Ciphers</a>).</td>
 <Insert the instructions for creating the IKE proposal and policy here. Below
 are some examples of IKE algorithms to specify as part of the instructions.>
 
--  **Encryption algorithm**—< list required algorithms here>
--  **Integrity algorithm**—< list required algorithms here>
--  **Diffie-Hellman group—**< list required group here>
+-  **Encryption algorithm**—<code>aes</code> (default), aes192, aes256, des, 3des
+-  **Integrity algorithm**—<code>sha1</code> (default), md5
+-  **Diffie-Hellman group—**—group1, <code>group2</code> (default), group5, group14, group24
+-  **Lifetime/SA Life Cycels—**—<code>86400</code> seconds (default)
 
-```
-<insert configuration code snippet here>
-```
-
-#### Configure the IKEv2 keyring
-
-< insert the instructions for creating the IKEv2 keyring here.>
-
-```
-<insert configuration code snippet here>
-```
-
-#### Configure the IKEv2 profile
-
-< insert the instructions for creating the IKEv2 profile here.>
-
-```
-<insert configuration code snippet here>
-```
-
-#### Configure the IPsec security association (SA)
-
-< insert the instructions for creating the IPsec SA here. Below is an example of
-parameters to set.>
-
--  **IPsec SA replay window-size**—Set this to 1024, which is the
-recommended value for <vendor-name><product-name>.
-
-```
-<insert configuration code snippet here>
-```
-
-#### Configure the IPsec transform set
-
-< insert the instructions for creating the IPsec transform set here.>
-
-```
-<insert configuration code snippet here>
-```
-
-#### Configure the IPsec static virtual tunnel interface (SVTI)
-
-< insert the instructions for creating the IPsec SVTI here. Below are some
-examples of parameters to set.>
-
--  Adjust the maximum segment size (MSS) value of TCP packets going through a
-router as discussed in
-[MTU Considerations](https://cloud.google.com/vpn/docs/concepts/mtu-considerations)
-for Cloud VPN.
-
-```
-<insert configuration code snippet here>
-```
 
 ### Configuring static routing
 
