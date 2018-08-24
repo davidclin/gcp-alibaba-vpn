@@ -508,26 +508,26 @@ connection if it drops)</td>
 </tr>
 <tr>
 <td>PFS (Perfect Forward Secrecy)</td>
-<td>group1, group2 (default), group5, group14, group24</td>
+<td>group1, <code>group2</code> (default), group5, group14, group24</td>
 </tr>
 <tr>
 <td>IKE ciphers</td>
-<td>aes (default), aes192, aes256, des, 3des (For details about IKE ciphers for IKEv1 or IKEv2 supported by GCP,
+<td><code>aes</code> (default), aes192, aes256, des, 3des (For details about IKE ciphers for IKEv1 or IKEv2 supported by GCP,
 including the additional ciphers for PFS, see <a
 href="https://cloud.google.com/vpn/docs/concepts/supported-ike-ciphers">Supported
 IKE Ciphers</a>).</td>
 </tr>
 <tr>
 <td>Integrity</td>
-<td>sha1 (default), md5</td>
+<td><code>sha1</code> (default), md5</td>
 </tr>
 <tr>
 <td>Diffie-Hellman (DH)</td>
-<td>group1, group2 (default), group5, group14, group24</td>
+<td>group1, <code>group2</code> (default), group5, group14, group24</td>
 </tr>
 <tr>
 <td>Lifetime/SA Life Cycles</td>
-<td>86400 seconds (default)</td>
+    <td><code>86400 seconds</code> (default)</td>
 </tr>
 </tbody>
 </table>
