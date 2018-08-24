@@ -477,13 +477,6 @@ settings that are compatible with the GCP side of the network. The following
 table lists settings and information about values compatible with GCP VPN.
 Use these settings for the procedures in the subsections that follow.
 
-<Not all of the settings in the following table are applicable to all vendor
-setups; use the settings that apply to your configuration. Remove the settings
-in the table that do not apply to current configuration.>
-
-**Note**: The <vendor-name><product-name> solution might have its own
-specifications for replay window size.
-
 <table>
 <thead>
 <tr>
@@ -498,7 +491,7 @@ specifications for replay window size.
 </tr>
 <tr>
 <td>Auth Protocol</td>
-<td><code>psk</code></td>
+<td>Pre-shared Key (psk)</td>
 </tr>
 <tr>
 <td>Shared Secret</td>
@@ -510,56 +503,31 @@ into your network.</td>
 </tr>
 <tr>
 <td>Start</td>
-<td><code>auto</code> (on-premises device should automatically restart the
+<td><code>Auto</code> (on-premises device should automatically restart the
 connection if it drops)</td>
 </tr>
 <tr>
 <td>PFS (Perfect Forward Secrecy)</td>
-<td>on</td>
-</tr>
-<tr>
-<td>DPD (Dead Peer Detection)</td>
-<td>Recommended: <code>Aggressive</code>. DPD detects when the Cloud VPN
-restarts and routes traffic using alternate tunnels.</td>
-</tr>
-<tr>
-<td>INITIAL_CONTACT (sometimes called <i>uniqueids</i>)</td>
-<td>Recommended: <code>on</code> (sometimes called <code>restart</code>). The
-purpose is to detect restarts faster so that perceived downtime is
-reduced.</td>
-</tr>
-<tr>
-<td>TSi (Traffic Selector - Initiator)</td>
-<td>Subnet networks: the ranges specified by the GCP local traffic selector. If
-no local traffic selector range was specified because the VPN is in an auto-mode
-VPC network and is announcing only the gateway's subnet, that subnet range is
-used. <br>
-<br>
-Legacy networks: the range of the network.</td>
-</tr>
-<tr>
-<td>TSr (Traffic Selector - Responder)</td>
-<td>IKEv2: The destination ranges of all of the routes that have the next hop
-VPN tunnel set to this tunnel on the GCP side.<br>
-<br>
-IKEv1: Arbitrarily, the destination range of one of the routes that has the
-next hop VPN tunnel set to this tunnel on the GCP side.</td>
-</tr>
-<tr>
-<td>MTU</td>
-<td>The MTU of the on-premises VPN device must be set to 1460 or lower. ESP
-packets leaving the device must not exceed 1460 bytes. You must enable
-prefragmentation on your device, which means that packets must be
-fragmented first, then encapsulated. For more information, see <a
-href="https://cloud.google.com/vpn/docs/concepts/mtu-considerations">Maximum
-Transmission Unit (MTU) considerations</a>.</td>
+<td>group1, group2 (default), group5, group14, group24</td>
 </tr>
 <tr>
 <td>IKE ciphers</td>
-<td>For details about IKE ciphers for IKEv1 or IKEv2 supported by GCP,
+<td>aes (default), aes192, aes256, des, 3des (For details about IKE ciphers for IKEv1 or IKEv2 supported by GCP,
 including the additional ciphers for PFS, see <a
 href="https://cloud.google.com/vpn/docs/concepts/supported-ike-ciphers">Supported
-IKE Ciphers</a>.</td>
+IKE Ciphers</a>).</td>
+</tr>
+<tr>
+<td>Integrity</td>
+<td>sha1 (default), md5</td>
+</tr>
+<tr>
+<td>Diffie-Hellman (DH)</td>
+<td>group1, group2 (default), group5, group14, group24</td>
+</tr>
+<tr>
+<td>Lifetime/SA Life Cycles</td>
+<td>86400 seconds (default)</td>
 </tr>
 </tbody>
 </table>
