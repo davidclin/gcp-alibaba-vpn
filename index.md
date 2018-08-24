@@ -162,7 +162,7 @@ For detailed topology information, see the following resources:
 -  For redundant topologies,  the
 [Cloud VPN documentation on redundant and high-throughput VPNs](https://cloud.google.com/vpn/docs/concepts/redundant-vpns).
 
-Disclaimer: At time of this writing, Alibaba Cloud VPN Gateway did not officially support the Border Gateway Protocol and hence the scope of this document is limited to site-to-site IPsec VPN tunnel configuration using static routing only.
+Disclaimer: At time of this writing, site-to-site IPsec VPN tunnel configuration using dynamic routing between Cloud VPN and Alibaba Cloud VPN Gateway is not supported. 
 
 ## Product environment
 
