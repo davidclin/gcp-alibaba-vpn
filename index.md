@@ -415,7 +415,7 @@ This section covers the steps of creating an Alibaba Cloud VPC.
     - Go to **Products > Virtual Private Cloud** 
 1. Create a new VPC
     - Select a **Region**  (for example, US (Silicon Valley))
-    - Click the **Create VPC button**
+    - Click the **Create VPC** button
 1. Configure the following VPC settings:
     - **VPC Name**—Enter the name of the VPC (for example, `alibaba-vpc`)
     - **Destination CIDR Block**—Specify the IP address range for the VPC in the form of a Classless Inter-Domain Routing (CIDR) block (for example, `192.168.0.0/16`)
