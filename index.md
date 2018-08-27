@@ -362,6 +362,14 @@ This section covers the steps of creating an Alibaba Cloud VPC.
 
 
 ### Create an Alibaba Cloud VSwitch
+This section covers the steps of configuring the Alibaba Cloud VSwitch.
+
+1. Within the same VPC configuration window pane, configure the following VSwitch settings:
+    - **VSwitch Name** - Enter the name of the VSwitch (for example, `alibaba-vswitch`)
+    - **Zone** - Select a zone for the VSwitch (for example, `USA West 1 Zone A`)
+    - **Destination CIDR Block** - Specify a subnet from the VPC’s CIDR IP address range (for example, `192.168.1.0/24`)
+1. Click on **OK** followed by the **Complete** button
+1. Verify the VPC and VSwitch status indicate “Available”
 
 ### Create an Alibaba Cloud VPN Gateway
 
