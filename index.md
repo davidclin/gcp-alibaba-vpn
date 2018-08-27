@@ -664,24 +664,6 @@ name><product-name></td>
 </tr>
 
 <tr>
-<td>Cloud Router name (for dynamic routing)</td>
-<td><code>[CLOUD_ROUTER_NAME]<code></td>
-<td><code>vpn-test-vendor-rtr<code></td>
-</tr>
-
-<tr>
-<td>BGP interface name</td>
-<td><code>[BGP_IF]<code></td>
-<td><code>if-1<code></td>
-</tr>
-
-<tr>
-<td>BGP session name (for dynamic routing)</td>
-<td><code>[BGP_SESSION_NAME]<code></td>
-<td><code>bgp-peer1<code></td>
-</tr>
-
-<tr>
 <td>The name for the first GCP VPN gateway.</td>
 <td><code>[VPN_GATEWAY_1]<code></td>
 <td><code>vpn-test-[VENDOR_NAME]-gw-1</code>, where <code>[VENDOR_ NAME]</code>
