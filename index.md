@@ -47,6 +47,7 @@ Alibaba Cloud VPN Gateway.
     - [GCP account and project](#gcp-account-and-project)
     - [Permissions](#permissions)
     - [IP Ranges](#ip-ranges)
+    - [GCP-compatible settings for IPSec and IKE](gcp-compatible-settings-for-ipsec-and-ike)
  - [Configuration Overview](#configuration-overview)
     - [Configure the GCP side](#configure-the-gcp-side)
     - [Configure the Alibaba Cloud side](#configure-the-alibaba-cloud-side)
@@ -189,6 +190,65 @@ in the article
 ### IP Ranges
 
 The IP address ranges of the GCP VPC and the Alibaba VPC must not overlap.
+
+### GCP-compatible settings for IPSec and IKE
+
+Configuring the vendor side of the VPN network requires you to use IPsec and IKE
+settings that are compatible with the GCP side of the network. The following
+table lists settings and information about values compatible with GCP VPN.
+Use these settings for the procedures in the subsections that follow.
+
+<table>
+<thead>
+<tr>
+<th><strong>Setting</strong></th>
+<th><strong>Description or value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IPsec Mode</td>
+<td>ESP+Auth Tunnel mode (Site-to-Site)</td>
+</tr>
+<tr>
+<td>Auth Protocol</td>
+<td>Pre-shared Key (psk)</td>
+</tr>
+<tr>
+<td>Shared Secret</td>
+<td>Also known as an IKE pre-shared key. Choose a strong password by following
+<a
+href="https://cloud.google.com/vpn/docs/how-to/generating-pre-shared-key">these
+guidelines</a>. The shared secret is very sensitive as it allows access
+into your network.</td>
+</tr>
+<tr>
+<td>Start</td>
+<td><code>Auto</code> (on-premises device should automatically restart the
+connection if it drops)</td>
+</tr>
+<tr>
+<td>PFS (Perfect Forward Secrecy)</td>
+<td>group1, <code>group2</code> (default), group5, group14, group24</td>
+</tr>
+<tr>
+<td>IKE ciphers</td>
+<td><code>aes</code> (default), aes192, aes256, des, 3des <br>(For details about IKE ciphers for IKEv1 or IKEv2 supported by GCP,
+including the additional ciphers for PFS, see <a
+href="https://cloud.google.com/vpn/docs/concepts/supported-ike-ciphers">Supported
+IKE Ciphers</a>).</td>
+</tr>
+</tbody>
+</table>
+
+#### Recommended Alibaba Cloud VPN Gateway IKE proposal and policy
+Below are fields you may be asked to complete for the Alibaba Cloud side configurations. 
+The defaults indicated below will work with the defaults used on the GCP side.
+
+-  **Encryption algorithm**—<code>aes</code> (default), aes192, aes256, des, 3des
+-  **Integrity algorithm**—<code>sha1</code> (default), md5
+-  **Diffie-Hellman group—**—group1, <code>group2</code> (default), group5, group14, group24
+-  **Lifetime/SA Life Cycels—**—<code>86400</code> seconds (default)
 
 
 ## Configuration Overview
@@ -432,67 +492,6 @@ Finally, in order to route traffic from the Alibaba Cloud VPC to Google Cloud VP
     - **Next Hop Type Type** – VPN Gateway
     - **VPN Gateway** – The VPN Gateway created earlier (e.g. alibaba-vpn-gateway)
 1. Click **OK**
-
-
-### GCP-compatible settings for IPSec and IKE
-
-Configuring the vendor side of the VPN network requires you to use IPsec and IKE
-settings that are compatible with the GCP side of the network. The following
-table lists settings and information about values compatible with GCP VPN.
-Use these settings for the procedures in the subsections that follow.
-
-<table>
-<thead>
-<tr>
-<th><strong>Setting</strong></th>
-<th><strong>Description or value</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>IPsec Mode</td>
-<td>ESP+Auth Tunnel mode (Site-to-Site)</td>
-</tr>
-<tr>
-<td>Auth Protocol</td>
-<td>Pre-shared Key (psk)</td>
-</tr>
-<tr>
-<td>Shared Secret</td>
-<td>Also known as an IKE pre-shared key. Choose a strong password by following
-<a
-href="https://cloud.google.com/vpn/docs/how-to/generating-pre-shared-key">these
-guidelines</a>. The shared secret is very sensitive as it allows access
-into your network.</td>
-</tr>
-<tr>
-<td>Start</td>
-<td><code>Auto</code> (on-premises device should automatically restart the
-connection if it drops)</td>
-</tr>
-<tr>
-<td>PFS (Perfect Forward Secrecy)</td>
-<td>group1, <code>group2</code> (default), group5, group14, group24</td>
-</tr>
-<tr>
-<td>IKE ciphers</td>
-<td><code>aes</code> (default), aes192, aes256, des, 3des <br>(For details about IKE ciphers for IKEv1 or IKEv2 supported by GCP,
-including the additional ciphers for PFS, see <a
-href="https://cloud.google.com/vpn/docs/concepts/supported-ike-ciphers">Supported
-IKE Ciphers</a>).</td>
-</tr>
-</tbody>
-</table>
-
-#### Configure the IKE proposal and policy
-
-<Insert the instructions for creating the IKE proposal and policy here. Below
-are some examples of IKE algorithms to specify as part of the instructions.>
-
--  **Encryption algorithm**—<code>aes</code> (default), aes192, aes256, des, 3des
--  **Integrity algorithm**—<code>sha1</code> (default), md5
--  **Diffie-Hellman group—**—group1, <code>group2</code> (default), group5, group14, group24
--  **Lifetime/SA Life Cycels—**—<code>86400</code> seconds (default)
 
 
 ### Testing the configuration
