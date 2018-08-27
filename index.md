@@ -357,17 +357,17 @@ This section covers the steps of creating an Alibaba Cloud VPC.
     - Select a **Region**  (for example, US (Silicon Valley))
     - Click the **Create VPC button**
 1. Configure the following VPC settings:
-    - **VPC Name** - Enter the name of the VPC (for example, `alibaba-vpc`)
-    - **Destination CIDR Block** - Specify the IP address range for the VPC in the form of a Classless Inter-Domain Routing (CIDR) block (for example, `192.168.0.0/16`)
+    - **VPC Name**—Enter the name of the VPC (for example, `alibaba-vpc`)
+    - **Destination CIDR Block**—Specify the IP address range for the VPC in the form of a Classless Inter-Domain Routing (CIDR) block (for example, `192.168.0.0/16`)
 
 
 ### Create an Alibaba Cloud VSwitch
 This section covers the steps of configuring the Alibaba Cloud VSwitch.
 
 1. Within the same VPC configuration window pane, configure the following VSwitch settings:
-    - **VSwitch Name** - Enter the name of the VSwitch (for example, `alibaba-vswitch`)
-    - **Zone** - Select a zone for the VSwitch (for example, `USA West 1 Zone A`)
-    - **Destination CIDR Block** - Specify a subnet from the VPC’s CIDR IP address range (for example, `192.168.1.0/24`)
+    - **VSwitch Name**—Enter the name of the VSwitch (for example, `alibaba-vswitch`)
+    - **Zone**—Select a zone for the VSwitch (for example, `USA West 1 Zone A`)
+    - **Destination CIDR Block**—Specify a subnet from the VPC’s CIDR IP address range (for example, `192.168.1.0/24`)
 1. Click on **OK** followed by the **Complete** button
 1. Verify the VPC and VSwitch status indicate “Available”
 
@@ -377,9 +377,9 @@ This section covers the steps of configuring the Alibaba Cloud VPN Gateway.
 1. Go to **Products > Virtual Private Cloud > VPN Gateways**
 1. Click **Create VPN Gateway**
 1. Configure the following settings:
-    - **Region** - Select a region (for example, `US (Silicon Valley)`)
-    - **Name** - Give the VPN Gateway a name (for example, `alibaba-vpn-gateway`)
-    - **VPC** - Select the VPC (for example, `alibaba-vpc`)
+    - **Region**—Select a region (for example, `US (Silicon Valley)`)
+    - **Name**—Give the VPN Gateway a name (for example, `alibaba-vpn-gateway`)
+    - **VPC**—Select the VPC (for example, `alibaba-vpc`)
     - Keep all other values as default
 1. Click **Buy Now**  
     - Check on the **VPN Gateway Agreement of Service** checkbox and click the **Activate** button.
@@ -387,10 +387,53 @@ This section covers the steps of configuring the Alibaba Cloud VPN Gateway.
 
 Note: The VPN Gateway will take several minutes to come up and obtain a public IP address. 
 
+### Configure an Alibaba Cloud Customer Gateway
+
+1. Login to the Alibaba Cloud console 
+1. Go to **Products > Virtual Private Cloud > Customer Gateways**
+1. Select **Region** (for example, `US (Silicon Valley)`)then click **Create Customer Gateway**
+1. Complete the following settings:
+    - **Name**—Provide a name to the customer gateway (for example, `gcp-customer-gateway`)
+    - **IP Address**—Provide the Public IP address of GCP (for example, `35.197.191.225`)
+    - Click **OK**
 
 ### Configure an Alibaba Cloud IPSec Connection
 
+This section covers the steps of creating an Alibaba IPSec connection with the GCP Cloud gateway.  
+
+1. Go to Products > Virtual Private Cloud > IPSec Connections
+1. Click Create IPsec Connection
+1. Complete the following settings:
+    - Name: Provide a name to the VPN connection (eg: tunnel-vpn-1)
+    - VPN Gateway: Choose the VPN gateway in the dropdown which was created earlier (e.g. alibaba-vpn-gateway)
+    - Customer Gateway: Choose the customer gateway in the dropdown which was created earlier (e.g. gcp-customer-gateway)
+    - Local network: Provide the local subnet for Alibaba (eg: 192.168.1.0/24)
+    - Remote Network: Provide the remote subnet for GCP (eg: 172.16.1.0/24)
+    - Effective Immediately: Yes
+1. Click on Advanced Configuration
+1. Complete the following settings:
+    - Pre-shared Key: Enter the pre-shared key used on GCP-side. IPsec tunneling requires that both agents use the same key. (e.g. MySharedSecret)
+    - Version: ikev2
+    - Leave all other options default
+1. Click OK
+1. Verify the IPSec Tunnel is established. It may take a few minutes.
+
+	Note: The tunnel status should eventually indicate Phase 2 of IKE Tunnel 
+Negotiation Succeeded. And from the GCP-side, the VPN tunnel status should transition from Negotiation failure to Established. You may need to refresh the GCP Platform Console page until the Established state appears. If the tunnel status in the Alibaba Cloud management console does not reach Succeeded or the tunnel status on the GCP Platform Console does not reach Established, refer to the Troubleshooting section of this document.
+
+
+
 ### Configure an Alibaba Cloud Static Route Entry
+Finally, in order to route traffic from the Alibaba Cloud VPC to Google Cloud VPC via the IPsec tunnel, you need to add a custom route entry for the VSwitch subnet. 
+
+1. Add static route entry
+    - Go to Products > Virtual Private Cloud > VPCs > Route Tables > Instance ID/Name of route table
+1. Click Add Route Entry
+1. Configure the following route settings:
+    - Destination CIDR Block – The destination Subnet (e.g. 172.16.1.0/24) 
+    - Next Hop Type Type – VPN Gateway
+    - VPN Gateway – The VPN Gateway created earlier (e.g. alibaba-vpn-gateway)
+1. Click OK
 
 
 ### GCP-compatible settings for IPSec and IKE
