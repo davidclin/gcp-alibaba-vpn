@@ -349,6 +349,17 @@ This section includes sample tasks that describe how to configure the
 on-premises side of the VPN gateway configuration using Alibaba Cloud VPN Gateway.
 
 ### Create an Alibaba Cloud VPC
+This section covers the steps of creating an Alibaba Cloud VPC.
+
+1. Login to the Alibaba Management Console
+    - Go to **Products > Virtual Private Cloud** 
+1. Create a new VPC
+    - Select a **Region**  (for example, US (Silicon Valley))
+    - Click the **Create VPC button**
+1. Configure the following VPC settings:
+    - **VPC Name** - Enter the name of the VPC (for example, `alibaba-vpc`)
+    - **Destination CIDR Block** - Specify the IP address range for the VPC in the form of a Classless Inter-Domain Routing (CIDR) block (for example, `192.168.0.0/16`)
+
 
 ### Create an Alibaba Cloud VSwitch
 
