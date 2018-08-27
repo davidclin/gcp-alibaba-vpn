@@ -472,7 +472,7 @@ This section covers the steps of creating an Alibaba IPSec connection with the G
     - **Effective Immediately**—Yes
 1. Click on **Advanced Configuration**
 1. Complete the following settings:
-    - **Pre-shared Key**—Enter the pre-shared key used on GCP-side. IPsec tunneling requires that both agents use the same key. (for example, `MySharedSecret`)
+    - **Pre-shared Key**—Enter the pre-shared key used on GCP-side. IPsec tunneling requires that both agents use the same key. 
     - **Version**—ikev2
     - Leave all other options default
 1. Click **OK**
