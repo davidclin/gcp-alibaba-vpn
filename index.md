@@ -341,7 +341,7 @@ configure the VPN gateway later.
 
 -  **Name**—The name of the VPN gateway. This name is displayed in the
     console and used in by the gcloud tool to reference the gateway. Use a
-    name like `vpn-test-[VENDOR_NAME]-gw-1`, where `[VENDOR_NAME]` is a
+    name like `vpn-test-alibaba-gw-1`, where `alibaba` is a
     string that identifies the vendor.
 -  **Network**—The VPC network that you created previously (for
     example,  `vpn-vendor-test-network`) that contains the instances that the
@@ -358,9 +358,7 @@ configure the VPN gateway later.
 -  **Name**—The name of the VPN tunnel, such as `vpn-test-tunnel1`.
 -  **Remote peer IP address**—The public external IP address of the
     on-premises VPN gateway.
--  **IKE version**—`IKEv2` or `IKEv1`. IKEv2 is preferred, but IKEv1 is
-    supported if it is the only supported IKE version that the on-premises
-    gateway can use.
+-  **IKE version**—`IKEv2` 
 -  **Shared secret**—A character string used in establishing encryption
     for the tunnel. You must enter the same shared secret into both VPN
     gateways. For more information, see
