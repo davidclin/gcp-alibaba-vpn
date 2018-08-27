@@ -194,8 +194,8 @@ The IP address ranges of the GCP VPC and the Alibaba VPC must not overlap.
 
 The Google Cloud VPN with Alibaba Cloud VPN Gateway configuration is comprised of the following steps.
 
-### Step 1: Configure the GCP side
-### Step 2: Configure the Alibaba Cloud side
+Step 1: Configure the GCP side
+Step 2: Configure the Alibaba Cloud side
 
 ## Configure the GCP side
 
