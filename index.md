@@ -56,7 +56,7 @@ Alibaba Cloud VPN Gateway.
         - [Select a GCP project name](#select-a-gcp-project-name)
         - [Create a custom VPC network and subnet](#create-a-custom-vpc-network-and-subnet)
         - [Create the GCP external IP address](#create-the-gcp-external-ip-address)
-    - [Configuring route-based IPsec VPN using static routing](#configuring-route-based-ipsec-vpn-using-static-routing)
+    - [Configure route-based IPsec VPN using static routing](#configure-route-based-ipsec-vpn-using-static-routing)
         - [Configure the VPN gateway](#configure-the-vpn-gateway)
         - [Configure firewall rules](#configure-firewall-rules)
 - [Configure the Alibaba Cloud side](#configure-the-alibaba-cloud-side)
@@ -329,6 +329,8 @@ have created.
 
 1. Make a note of the IP address that is created so that you can use it to
 configure the VPN gateway later.
+
+### Configure Route Based IPSec VPN Using Static Routing
 
 #### Configure the VPN gateway
 
