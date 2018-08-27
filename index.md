@@ -352,7 +352,7 @@ on-premises side of the VPN gateway configuration using Alibaba Cloud VPN Gatewa
 
 ### Create an Alibaba Cloud VSwitch
 
-### Configure the Alibaba Cloud VPN Gateway
+### Create an Alibaba Cloud VPN Gateway
 
 ### Configure an Alibaba Cloud Customer Gateway
 
