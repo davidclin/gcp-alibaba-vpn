@@ -666,8 +666,8 @@ name><product-name></td>
 <tr>
 <td>The name for the first GCP VPN gateway.</td>
 <td><code>[VPN_GATEWAY_1]<code></td>
-<td><code>vpn-test-[VENDOR_NAME]-gw-1</code>, where <code>[VENDOR_ NAME]</code>
-is the <code>[VENDOR_NAME]</code> string</td>
+<td><code>vpn-test-alibaba-gw-1</code>, where <code>alibaba</code>
+is the <code>alibaba</code> string</td>
 </tr>
 
 <tr>
