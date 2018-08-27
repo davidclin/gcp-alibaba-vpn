@@ -75,7 +75,6 @@ Alibaba Cloud VPN Gateway.
     - [Running gcloud commands](#running-gcloud-commands)
     - [Configuration parameters and values](#configuration-parameters-and-values)
     - [Setting environment variables for gcloud command parameters](#setting-environment-variables-for-gcloud-command-parameters)
-    - [Configuring an IPsec VPN using dynamic routing](#configuring-an-ipsec-vpn-using-dynamic-routing)
     - [Configuring route-based IPsec VPN using static routing](#configuring-route-based-ipsec-vpn-using-static-routing)
 
 <Put trademark statements here>: <vendor terminology> and the <vendor> logo are
