@@ -401,39 +401,37 @@ Note: The VPN Gateway will take several minutes to come up and obtain a public I
 
 This section covers the steps of creating an Alibaba IPSec connection with the GCP Cloud gateway.  
 
-1. Go to Products > Virtual Private Cloud > IPSec Connections
-1. Click Create IPsec Connection
+1. Go to **Products > Virtual Private Cloud > IPSec Connections**
+1. Click **Create IPsec Connection**
 1. Complete the following settings:
-    - Name: Provide a name to the VPN connection (eg: tunnel-vpn-1)
-    - VPN Gateway: Choose the VPN gateway in the dropdown which was created earlier (e.g. alibaba-vpn-gateway)
-    - Customer Gateway: Choose the customer gateway in the dropdown which was created earlier (e.g. gcp-customer-gateway)
-    - Local network: Provide the local subnet for Alibaba (eg: 192.168.1.0/24)
-    - Remote Network: Provide the remote subnet for GCP (eg: 172.16.1.0/24)
-    - Effective Immediately: Yes
-1. Click on Advanced Configuration
+    - **Name**—Provide a name to the VPN connection (for example, `tunnel-vpn-1`)
+    - **VPN Gateway**—Choose the VPN gateway in the dropdown which was created earlier (for example, `alibaba-vpn-gateway`)
+    - **Customer Gateway**—Choose the customer gateway in the dropdown which was created earlier (for example, `gcp-customer-gateway`)
+    - **Local network**—Provide the local subnet for Alibaba (for example, `192.168.1.0/24`)
+    - **Remote Network**—Provide the remote subnet for GCP (for example, `172.16.1.0/24`)
+    - **Effective Immediately**—Yes
+1. Click on **Advanced Configuration**
 1. Complete the following settings:
-    - Pre-shared Key: Enter the pre-shared key used on GCP-side. IPsec tunneling requires that both agents use the same key. (e.g. MySharedSecret)
-    - Version: ikev2
+    - **Pre-shared Key**—Enter the pre-shared key used on GCP-side. IPsec tunneling requires that both agents use the same key. (for example, `MySharedSecret`)
+    - **Version**—ikev2
     - Leave all other options default
-1. Click OK
+1. Click **OK**
 1. Verify the IPSec Tunnel is established. It may take a few minutes.
 
 	Note: The tunnel status should eventually indicate Phase 2 of IKE Tunnel 
 Negotiation Succeeded. And from the GCP-side, the VPN tunnel status should transition from Negotiation failure to Established. You may need to refresh the GCP Platform Console page until the Established state appears. If the tunnel status in the Alibaba Cloud management console does not reach Succeeded or the tunnel status on the GCP Platform Console does not reach Established, refer to the Troubleshooting section of this document.
 
-
-
 ### Configure an Alibaba Cloud Static Route Entry
 Finally, in order to route traffic from the Alibaba Cloud VPC to Google Cloud VPC via the IPsec tunnel, you need to add a custom route entry for the VSwitch subnet. 
 
 1. Add static route entry
-    - Go to Products > Virtual Private Cloud > VPCs > Route Tables > Instance ID/Name of route table
-1. Click Add Route Entry
+    - Go to **Products > Virtual Private Cloud > VPCs > Route Tables > Instance ID/Name of route table**
+1. Click **Add Route Entry**
 1. Configure the following route settings:
-    - Destination CIDR Block – The destination Subnet (e.g. 172.16.1.0/24) 
-    - Next Hop Type Type – VPN Gateway
-    - VPN Gateway – The VPN Gateway created earlier (e.g. alibaba-vpn-gateway)
-1. Click OK
+    - **Destination CIDR Block** – The destination Subnet (e.g. 172.16.1.0/24) 
+    - **Next Hop Type Type** – VPN Gateway
+    - **VPN Gateway** – The VPN Gateway created earlier (e.g. alibaba-vpn-gateway)
+1. Click **OK**
 
 
 ### GCP-compatible settings for IPSec and IKE
@@ -496,28 +494,6 @@ are some examples of IKE algorithms to specify as part of the instructions.>
 -  **Diffie-Hellman group—**—group1, <code>group2</code> (default), group5, group14, group24
 -  **Lifetime/SA Life Cycels—**—<code>86400</code> seconds (default)
 
-
-### Configuring static routing
-
-Follow the procedure in this section to configure static routing of traffic to
-the GCP network through the VPN tunnel interface.
-
-```
-<insert configuration code snippet here>
-```
-
-For more recommendations about on-premises routing configurations, see
-[GCP Best Practices](https://cloud.google.com/router/docs/resources/best-practices).
-
-### Saving the configuration
-
-Follow the procedure in this section to save the on-premises configuration.
-
-< insert the instructions for saving the configuration here.>
-
-```
-<insert configuration code snippet here>
-```
 
 ### Testing the configuration
 
