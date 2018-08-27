@@ -213,9 +213,10 @@ The order of these steps is important and will yield faster results when perform
 
 ## Configure the GCP side
 
-This section covers how to configure Cloud VPN. The preferred approach is to use
-dynamic routing with the BGP protocol, but this section also includes
-instructions for configuring static routing.
+This section covers the steps for creating a GCP IPsec VPN using static routing.
+Both route-based Cloud VPN and policy-based Cloud VPN use static routing.  For
+information on how this works, see the 
+[Cloud VPN Overview](https://cloud.google.com/compute/docs/vpn/overview).
 
 There are two ways to create VPN gateways on GCP: using the Google Cloud
 Platform Console and using the
@@ -250,7 +251,7 @@ then populate the following fields:
 + **Name**—The name for the subnet, such as `vpn-subnet-1`.
 + **Region**—The region that is geographically closest to the
     on-premises gateway, such as  `us-east1`.
-+ **IP address range**—A range such as `172.16.100.0/24`.
++ **IP address range**—A range such as `172.16.1.0/24`.
 
 1. In the **New subnet** window, click **Done**.
 1. Click **Create**. You're returned to the **VPC networks** page, where it
@@ -277,15 +278,7 @@ have created.
 1. Make a note of the IP address that is created so that you can use it to
 configure the VPN gateway later.
 
-### Configuring an IPsec VPN using dynamic routing
-
-For dynamic routing, you use
-[Cloud Router](https://cloud.google.com/router/docs/concepts/overview)
-to establish BGP sessions between GCP and the on-premises
-<vendor-name><vendor product> equipment. We recommend dynamic routing over
-static routing where possible, as discussed in the
-[Cloud VPN Overview](https://cloud.google.com/compute/docs/vpn/overview) and
-[Cloud VPN Network and Tunnel Routing](https://cloud.google.com/vpn/docs/concepts/choosing-networks-routing).
+### Configuring an IPsec VPN using static routing
 
 **Important:** Throughout these procedures, you assign names to entities like
 the VPC network and subnet, IP address, and so on. Each time you assign a name,
@@ -326,49 +319,15 @@ procedures.
     gateways. For more information, see
     [Generating a Strong Pre-shared Key](https://cloud.google.com/vpn/docs/how-to/generating-pre-shared-key).
 
-1. Under **Routing options**, select the **Dynamic (BGP)** tab.
-1. Under **Cloud router, **select** Create cloud router** and then populate
-the following fields:
+1. Under **Routing options**, select the **Route based** or **Policy based** tab.
+1. Populate the following fields:
 
--  **Name**—The name of the Cloud Router. This name is displayed in
-    the console. If you use `gcloud` command-line tool to perform VPN tasks,
-    you use this name to reference the router. Example: `vpn-test-vendor-rtr.`
--  **Google ASN**—The 
-    [private ASN](https://tools.ietf.org/html/rfc6996) (`64512–65534`,
-    `4200000000–4294967294`) for the router you are configuring. It can be
-    any private ASN that you are not already using. Example: `65002`.
+-  **Remote network IP range**—The range or ranges of the on-premises network,
+   which is the network on the other side of the tunnel from the Cloud VPN gateway
+   you are currently configuring. 
+-  **Local subnetworks**—The local subnet or subnets of the Cloud VPN's VPC. 
 
-1. Click **Save and continue**.
-1. Next to **BGP session**, click the pencil icon and then populate the
-following fields:
-
-- **Name**—A name for the session, such as `bgp-peer1`.
--  **Peer ASN**—The [private ASN](https://tools.ietf.org/html/rfc6996)
-    (`64512–65534`, `4200000000–4294967294`) for the on-premises VPN device
-    you are configuring. It can be any private ASN that you are not already using.
-    Example: `65001`.
-- **Google BGP IP address**—A
-    [link-local](https://wikipedia.org/wiki/Link-local_address) IP address
-    that belongs to the same `/30` subnet in `169.254.0.0/16`. Example:
-    `169.254.1.1`.
--  **Peer BGP IP address**—A link-local IP address for the on-premises
-    peer. Example: `169.254.1.2`. For details, see
-    [this explanation of dynamic routing for VPN tunnels in VPC networks](https://cloud.google.com/router/docs/concepts/overview#dynamic_routing_for_vpn_tunnels_in_vpc_networks).
--  **Remote network IP range**—The IP address range of the on-premises
-    subnet on the other side of the tunnel from this gateway.
--  **Advertised route priority**–Configure this option if you want to
-    configure redundant or high-throughput VPNs as described in 
-    [advanced VPN configurations](#advanced-vpn-configurations). Note that if you
-    don't need advanced VPN now, you will need to configure a new VPN tunnel
-    later to support it. The advertised route priority is the base priority
-    that Cloud Router uses when advertising the "to GCP" routes. For more
-    information, see
-    [Route metrics](https://cloud.google.com/router/docs/concepts/overview#route_metrics).
-    Your on-premises VPN gateway imports these as MED values.
-
-1. Click **Save and continue**.
-1. Click **Create**. The GCP VPN gateway and the Cloud Router are initiated,
-and the tunnel is initiated.
+1. Click **Create**. The GCP VPN gateway is initiated, and the tunnel is initiated.
 
 This procedure automatically creates a static route to the on-premises subnet as
 well as forwarding rules for UDP ports 500 and 4500 and for ESP traffic. The VPN
@@ -388,8 +347,9 @@ firewall to allow inbound traffic from your VPC subnet prefixes.
 1. Populate the following fields:
 
 1. **Name**—A name such as `vpnrule1`.
-1. **VPC network**—The name of the VPC network that you created
+1. **Network**—The name of the VPC network that you created
     previously (for example,  `vpn-vendor-test-network`).
+1. **Target tags:**—All instances in the network  
 1. **Source filter**—A filter to apply your rule to specific sources of
     traffic. In this case, choose source IP ranges.
 1. **Source IP ranges**—The on-premises IP ranges to accept from the
@@ -405,9 +365,6 @@ Both route-based Cloud VPN and policy-based Cloud VPN use static routing.  For
 information on how this works, see the 
 [Cloud VPN Overview](https://cloud.google.com/compute/docs/vpn/overview).
 
-**Note**: Some steps in the procedure for using static routing are the same as
-steps for using dynamic routing. Rather than repeat those steps in the following
-procedure, the procedure links to earlier sections of this guide.
 
 1. Complete the
 [initial tasks](#initial-tasks)
