@@ -62,7 +62,8 @@ Alibaba Cloud VPN Gateway.
     - [Create an Alibaba Cloud VPC](#create-an-alibaba-cloud-vpc)
     - [Create an Alibaba Cloud VSwitch](#create-an-alibaba-cloud-vswitch)
     - [Create an Alibaba Cloud VPN Gateway](#create-an-alibaba-cloud-vpn-gateway)
-    - [Configure the Alibaba Cloud Customer Gateway](#configure-the-alibaba-cloud-customer-gateway)
+    - [Configure an Alibaba Cloud Customer Gateway](#configure-an-alibaba-cloud-customer-gateway)
+    - [Configure an Alibaba Cloud IPSec Connection](#configure-an-alibaba-cloud-ipsec-connection)
     - [Configure an Alibaba Cloud Static Route Entry](#configure-an-alibaba-cloud-static-route-entry)
     - [Testing the configuration](#testing-the-configuration)
 - [Troubleshooting IPsec on Alibaba Cloud VPN Gateway](#troubleshooting-ipsec-on-alibaba-cloud-vpn-gateway)
@@ -194,8 +195,8 @@ The IP address ranges of the GCP VPC and the Alibaba VPC must not overlap.
 
 The Google Cloud VPN with Alibaba Cloud VPN Gateway configuration is comprised of the following steps.
 
-Step 1: Configure the GCP side
-Step 2: Configure the Alibaba Cloud side
+1. Configure the GCP side
+1. Configure the Alibaba Cloud side
 
 ## Configure the GCP side
 
@@ -342,43 +343,23 @@ firewall to allow inbound traffic from your VPC subnet prefixes.
 
 1. Click **Create**.
 
-## Configure the <vendor-name><vendor product> side
+## Configure the Alibaba Cloud side
 
-<This section includes sample tasks that describe how to configure the
-on-premises side of the VPN gateway configuration using <vendor-name>
-equipment.>
+This section includes sample tasks that describe how to configure the
+on-premises side of the VPN gateway configuration using Alibaba Cloud VPN Gateway.
 
-<For an example of how to fill in the instructions and parameters, see the
-[Cisco ASR1000 section](https://cloud.google.com/community/tutorials/using-cloud-vpn-with-cisco-asr#configuration--cisco-asr-1000)
-of
-[the VPN Interop guide for Cisco ASR](https://cloud.google.com/community/tutorials/using-cloud-vpn-with-cisco-asr#top_of_page).
-For each set of instructions, explain what purpose the configuration setting
-serves.>
+### Create an Alibaba Cloud VPC
 
-### Creating the base network configuration
+### Create an Alibaba Cloud VSwitch
 
-<The sample wording below assumes that you are showing the configuration steps
-in the configuration code snippet below. If not, list the steps needed.>
+### Configure the Alibaba Cloud VPN Gateway
 
-Follow the procedure listed in the configuration code snippet below to create
-the base Layer 3 network configuration of <vendor-name>. Note the following:
+### Configure an Alibaba Cloud Customer Gateway
 
--  At least one internal-facing network interface is required in order to
-connect to your on-premises network, and one external-facing interface is
-required in order to connect to GCP.
+### Configure an Alibaba Cloud IPSec Connection
 
-```
-<insert configuration code snippet here>
-```
+### Configure an Alibaba Cloud Static Route Entry
 
-### Creating the base VPN gateway configuration
-
-Follow the procedures in this section to create the base VPN configuration.
-
-<This section contains outlines of subsections for different aspects of
-configuring IPsec and IKE on the vendor side. Fill in the sections that are
-relevant to the current configuration, and remove any sections that don't
-apply.>
 
 ### GCP-compatible settings for IPSec and IKE
 
