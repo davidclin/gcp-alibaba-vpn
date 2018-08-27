@@ -372,6 +372,21 @@ This section covers the steps of configuring the Alibaba Cloud VSwitch.
 1. Verify the VPC and VSwitch status indicate “Available”
 
 ### Create an Alibaba Cloud VPN Gateway
+This section covers the steps of configuring the Alibaba Cloud VPN Gateway.
+
+1. Go to **Products > Virtual Private Cloud > VPN Gateways**
+1. Click **Create VPN Gateway**
+1. Configure the following settings:
+    - **Region** - Select a region (e.g. US (Silicon Valley))
+    - **Name** - Give the VPN Gateway a name (e.g alibaba-vpn-gateway)
+    - **VPC** - Select the VPC (e.g. alibaba-vpc)
+    - Keep all other values as default
+1. Click **Buy Now**  
+    - Check on the **VPN Gateway Agreement of Service** checkbox and click the Activate button.
+    - Click **Console** and navigate back to **Products > Virtual Private Cloud > VPN Gateways** to verify the status and take note of the IP address as this will be used to for GCP-side configuration.
+
+Note: The VPN Gateway will take several minutes to come up and obtain a public IP 
+          address. 
 
 ### Configure an Alibaba Cloud Customer Gateway
 
