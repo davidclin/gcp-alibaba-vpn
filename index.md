@@ -61,7 +61,7 @@ Alibaba Cloud VPN Gateway.
 - [Configure the Alibaba Cloud side](#configure-the-alibaba-cloud-side)
     - [Create an Alibaba Cloud VPC](#create-an-alibaba-cloud-vpc)
     - [Create an Alibaba Cloud VSwitch](#create-an-alibaba-cloud-vswitch)
-    - [Create an Alibaba Cloud VPN Gateway](#create-an-alibaba-cloud-gateway)
+    - [Create an Alibaba Cloud VPN Gateway](#create-an-alibaba-cloud-vpn-gateway)
     - [Configure the Alibaba Cloud Customer Gateway](#configure-the-alibaba-cloud-customer-gateway)
     - [Configure an Alibaba Cloud Static Route Entry](#configure-an-alibaba-cloud-static-route-entry)
     - [Testing the configuration](#testing-the-configuration)
@@ -193,20 +193,9 @@ The IP address ranges of the GCP VPC and the Alibaba VPC must not overlap.
 ## Configuration Overview
 
 The Google Cloud VPN with Alibaba Cloud VPN Gateway configuration is comprised of the following steps.
-The order of these steps is important and will yield faster results when performed as instructed. 
 
-### Step 1: Alibaba Cloud VPC, VSwitch, and VPN Gateway configuration
-1. Create Alibaba Cloud VPC
-1. Create Alibaba Cloud VSwitch
-1. Create Alibaba Cloud Gateway
-### Step 2: GCP Configuration
-1. Create GCP VPC network
-1. Create GCP VPN Gateway
-### Step 3: Alibaba Cloud Customer Gateway and IPSec Connection configuration
-1. Create Alibaba Cloud Customer Gateway
-1. Create IPSec Connection
-1. Configure static route entry
-
+### Step 1: Configure the GCP side
+### Step 2: Configure the Alibaba Cloud side
 
 ## Configure the GCP side
 
