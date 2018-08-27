@@ -229,11 +229,11 @@ connection if it drops)</td>
 </tr>
 <tr>
 <td>PFS (Perfect Forward Secrecy)</td>
-<td>group1, <code>group2</code> (default), group5, group14, group24</td>
+<td>group1, group2, group5, group14, group24</td>
 </tr>
 <tr>
 <td>IKE ciphers</td>
-<td><code>aes</code> (default), aes192, aes256, des, 3des <br>(For details about IKE ciphers for IKEv1 or IKEv2 supported by GCP,
+<td>aes, aes192, aes256, des, 3des <br>(For details about IKE ciphers for IKEv1 or IKEv2 supported by GCP,
 including the additional ciphers for PFS, see <a
 href="https://cloud.google.com/vpn/docs/concepts/supported-ike-ciphers">Supported
 IKE Ciphers</a>).</td>
