@@ -77,8 +77,7 @@ Alibaba Cloud VPN Gateway.
     - [Setting environment variables for gcloud command parameters](#setting-environment-variables-for-gcloud-command-parameters)
     - [Configuring route-based IPsec VPN using static routing](#configuring-route-based-ipsec-vpn-using-static-routing)
 
-<Put trademark statements here>: <vendor terminology> and the <vendor> logo are
-trademarks of <vendor company name> or its affiliates in the United States
+Alibaba and the Alibaba logo are trademarks of Alibaba or its affiliates in the United States
 and/or other countries.
 
 _Disclaimer: This interoperability guide is intended to be informational in
