@@ -47,7 +47,7 @@ Alibaba Cloud VPN Gateway.
     - [GCP account and project](#gcp-account-and-project)
     - [Permissions](#permissions)
     - [IP Ranges](#ip-ranges)
-    - [GCP-compatible settings for IPSec and IKE](gcp-compatible-settings-for-ipsec-and-ike)
+    - [GCP-compatible settings for IPSec and IKE](#gcp-compatible-settings-for-ipsec-and-ike)
  - [Configuration Overview](#configuration-overview)
     - [Configure the GCP side](#configure-the-gcp-side)
     - [Configure the Alibaba Cloud side](#configure-the-alibaba-cloud-side)
