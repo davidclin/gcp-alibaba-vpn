@@ -145,6 +145,8 @@ Cloud VPN supports the following topology with Alibaba Cloud VPN Gateway:
 
 -  A site-to-site IPsec VPN tunnel configuration using static routing.
 
+<p><img align="center" src="topology.PNG" height="200" /></p>
+
 For detailed topology information, see the following resources:
 
 -  For basic VPN topologies, see 
