@@ -337,42 +337,35 @@ configure the VPN gateway later.
 [go to the VPN page](https://console.cloud.google.com/networking/vpn/list).
 1. Click **Create VPN connection**.
 1. Populate the following fields for the gateway:
-
--  **Name**—The name of the VPN gateway. This name is displayed in the
+    -  **Name**—The name of the VPN gateway. This name is displayed in the
     console and used in by the gcloud tool to reference the gateway. Use a
     name like `vpn-test-alibaba-gw-1`, where `alibaba` is a
     string that identifies the vendor.
--  **Network**—The VPC network that you created previously (for
+    -  **Network**—The VPC network that you created previously (for
     example,  `vpn-vendor-test-network`) that contains the instances that the
     VPN gateway will serve.
--  **Region**—The region where you want to locate the VPN gateway.
+    -  **Region**—The region where you want to locate the VPN gateway.
     Normally, this is the region that contains the instances you want to reach.
--  **IP address**—Select the 
+    -  **IP address**—Select the 
     [static external IP address](#create-the-gcp-external-ip-address)
     (for example, `vpn-test-static-ip`) that you created for this gateway
     in the previous section.
-
 1. Populate the fields for at least one tunnel:
-
--  **Name**—The name of the VPN tunnel, such as `vpn-test-tunnel1`.
--  **Remote peer IP address**—The public external IP address of the
+    -  **Name**—The name of the VPN tunnel, such as `vpn-test-tunnel1`.
+    -  **Remote peer IP address**—The public external IP address of the
     on-premises VPN gateway.
--  **IKE version**—`IKEv2` 
--  **Shared secret**—A character string used in establishing encryption
+    -  **IKE version**—`IKEv2` 
+    -  **Shared secret**—A character string used in establishing encryption
     for the tunnel. You must enter the same shared secret into both VPN
     gateways. For more information, see
     [Generating a Strong Pre-shared Key](https://cloud.google.com/vpn/docs/how-to/generating-pre-shared-key).
-
 1. Under **Routing options**, select the **Route based** or **Policy based** tab.
 1. Populate the following fields:
-
--  **Remote network IP range**—The range or ranges of the on-premises network,
+    -  **Remote network IP range**—The range or ranges of the on-premises network,
    which is the network on the other side of the tunnel from the Cloud VPN gateway
    you are currently configuring. 
--  **Local subnetworks**—The local subnet or subnets of the Cloud VPN's VPC. 
-
+    -  **Local subnetworks**—The local subnet or subnets of the Cloud VPN's VPC. 
 1. Click **Create**. The GCP VPN gateway is initiated, and the tunnel is initiated.
-
 This procedure automatically creates a static route to the on-premises subnet as
 well as forwarding rules for UDP ports 500 and 4500 and for ESP traffic. The VPN
 gateways will not connect until you've configured the on-premises gateway and
