@@ -192,10 +192,15 @@ The IP address ranges of the GCP VPC and the Alibaba VPC must not overlap.
 
 ### GCP-compatible settings for IPSec and IKE
 
-Configuring the vendor side of the VPN network requires you to use IPsec and IKE
-settings that are compatible with the GCP side of the network. The following
-table is informational only and lists settings about values that are compatible with GCP VPN.
+Configuring the Alibaba Cloud side of the VPN network requires you to use IPsec and IKE
+settings that are compatible with the GCP side of the network. 
 
+By default, the Alibaba Cloud VPN Gateway IKE proposal and policy automatically work with GCP VPN defaults so there
+is nothing you need to do. 
+
+The following GCP VPN table and Alibaba Cloud VPN values provided below are *informational only*.
+
+**GCP VPN Table**
 <table>
 <thead>
 <tr>
@@ -239,14 +244,11 @@ IKE Ciphers</a>).</td>
 </tbody>
 </table>
 
-#### Recommended Alibaba Cloud VPN Gateway IKE proposal and policy
-Alibaba Cloud VPN Gateway supports the following IPsec parameters and ciphers for configuring VPN gateways and tunnels.
-The defaults indicated below will work with the defaults used on the GCP side. This is informational only.
-
+**Alibaba Cloud VPN Gateway supported IKE proposal and policies**
 -  **Encryption algorithm**—<code>aes</code> (default), aes192, aes256, des, 3des
 -  **Integrity algorithm**—<code>sha1</code> (default), md5
 -  **Diffie-Hellman group—**—group1, <code>group2</code> (default), group5, group14, group24
--  **Lifetime/SA Life Cycels—**—<code>86400</code> seconds (default)
+-  **Lifetime/SA Life Cycles—**—<code>86400</code> seconds (default)
 
 
 ## Configuration Overview
