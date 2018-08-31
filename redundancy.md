@@ -30,7 +30,7 @@ Alibaba Cloud VPN Gateway with redundancy
         - [Create a custom VPC network and subnet](#create-a-custom-vpc-network-and-subnet)
         - [Create the GCP external IP addresses for Cloud VPN gateways](#create-the-gcp-external-ip-addresses-for-cloud-vpn-gateways)
     - [Configure route-based IPsec VPN using static routing](#configure-route-based-ipsec-vpn-using-static-routing)
-        - [Configure the VPN gateway](#configure-the-vpn-gateways)
+        - [Configure the VPN gateways](#configure-the-vpn-gateways)
         - [Configure firewall rules](#configure-firewall-rules)
 - [Configure the Alibaba Cloud side](#configure-the-alibaba-cloud-side)
     - [Create an Alibaba Cloud VPC](#create-an-alibaba-cloud-vpc)
