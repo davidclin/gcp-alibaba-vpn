@@ -1,9 +1,9 @@
 ---
-title: Google Cloud VPN Interop Guide for Alibaba Cloud VPN Gateway
+title: Google Cloud VPN Interop Guide for Alibaba Cloud VPN Gateway with Redundancy
 description: Describes how to build IPsec VPNs between Cloud VPN on Google Cloud Platform (GCP) and  Alibaba Cloud VPN Gateway with redudancy
 author: David Lin
 tags: VPN, interop, alibaba, alibaba cloud vpn gateway, redundancy
-date_published: 2018-08-28
+date_published: 2018-08-31
 ---
 
 **BEGIN: HOW TO USE THIS TEMPLATE**
@@ -33,11 +33,11 @@ date_published: 2018-08-28
    
 <**END: HOW TO USE THIS TEMPLATE**>
 
-# Using Cloud VPN with Alibaba Cloud VPN Gateway
+# Using Cloud VPN with Alibaba Cloud VPN Gateway with Redundancy
 
-Learn how to build site-to-site IPsec VPNs between
+Learn how to build IPsec VPNs between
 [Cloud VPN](https://cloud.google.com/vpn/docs/) on Google Cloud Platform (GCP) and
-Alibaba Cloud VPN Gateway.
+Alibaba Cloud VPN Gateway with redundancy
 
 - [Google Cloud VPN Interop Guide](#google-cloud-vpn-interop-guide)
 - [Introduction](#introduction)
@@ -89,7 +89,7 @@ Author: cloudservices-gcp-support@eplus.com
 
 This guide walks you through the process of configuring
 Alibaba Cloud VPN Gateway for integration with the
-[Cloud VPN service](https://cloud.google.com/vpn/docs) on GCP.
+[Cloud VPN service](https://cloud.google.com/vpn/docs) on GCP with redundancy.
 
 If you are using this guide to configure your Alibaba Cloud VPN
 Gateway implementation, be sure to substitute the correct IP
@@ -143,7 +143,7 @@ entry and custom route entry.
 
 Cloud VPN supports the following topology with Alibaba Cloud VPN Gateway:
 
--  A site-to-site IPsec VPN tunnel configuration using static routing.
+-  Redundant IPsec VPN tunnel configuration using static routing.
 
 <p><img align="center" src="topology.PNG" height="200" /></p>
 
@@ -154,7 +154,7 @@ For detailed topology information, see the following resources:
 -  For redundant topologies,  the
 [Cloud VPN documentation on redundant and high-throughput VPNs](https://cloud.google.com/vpn/docs/concepts/redundant-vpns).
 
-Disclaimer: At time of this writing, site-to-site IPsec VPN tunnel configuration using dynamic routing between Cloud VPN and Alibaba Cloud VPN Gateway is not supported. 
+Disclaimer: At time of this writing, IPsec VPN tunnel configuration using dynamic routing between Cloud VPN and Alibaba Cloud VPN Gateway is not supported. 
 
 ## Product environment
 
@@ -259,7 +259,7 @@ The Google Cloud VPN with Alibaba Cloud VPN Gateway configuration is comprised o
 
 ## Configure the GCP side
 
-This section covers the steps for creating a GCP IPsec VPN using static routing.
+This section covers the steps for creating a redundant GCP IPsec VPN using static routing.
 Both route-based Cloud VPN and policy-based Cloud VPN use static routing.  For
 information on how this works, see the 
 [Cloud VPN Overview](https://cloud.google.com/compute/docs/vpn/overview).
@@ -328,6 +328,8 @@ have created.
 
 1. Make a note of the IP address that is created so that you can use it to
 configure the VPN gateway later.
+
+1. Repeat these steps 3 more times  
 
 ### Configure Route Based IPSec VPN Using Static Routing
 
