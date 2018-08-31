@@ -35,7 +35,7 @@ Alibaba Cloud VPN Gateway with redundancy
 - [Configure the Alibaba Cloud side](#configure-the-alibaba-cloud-side)
     - [Create an Alibaba Cloud VPC](#create-an-alibaba-cloud-vpc)
     - [Create an Alibaba Cloud VSwitch](#create-an-alibaba-cloud-vswitch)
-    - [Create an Alibaba Cloud VPN Gateways](#create-an-alibaba-cloud-vpn-gateways)
+    - [Create Alibaba Cloud VPN Gateways](#create-alibaba-cloud-vpn-gateways)
     - [Configure Alibaba Cloud Customer Gateways](#configure-alibaba-cloud-customer-gateways)
     - [Configure Alibaba Cloud IPSec Connections](#configure-alibaba-cloud-ipsec-connections)
     - [Configure an Alibaba Cloud Static Route Entry](#configure-an-alibaba-cloud-static-route-entry)
