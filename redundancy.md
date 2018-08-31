@@ -469,7 +469,7 @@ Note: The VPN Gateway will take several minutes to come up and obtain a public I
 1. Repeat to create a second customer gateway using a different name, such as `gcp-customer-gateway-2`
 and provide the IP address of the second GCP customer gateway.
 
-### Configure an Alibaba Cloud IPSec Connection
+### Configure Alibaba Cloud IPSec Connections
 
 This section covers the steps of creating an Alibaba IPSec connection with the GCP Cloud gateway.  
 
@@ -477,8 +477,8 @@ This section covers the steps of creating an Alibaba IPSec connection with the G
 1. Click **Create IPsec Connection**
 1. Complete the following settings:
     - **Name**—Provide a name to the VPN connection (for example, `tunnel-vpn-1`)
-    - **VPN Gateway**—Choose the VPN gateway in the dropdown which was created earlier (for example, `alibaba-vpn-gateway`)
-    - **Customer Gateway**—Choose the customer gateway in the dropdown which was created earlier (for example, `gcp-customer-gateway`)
+    - **VPN Gateway**—Choose the VPN gateway in the dropdown which was created earlier (for example, `alibaba-vpn-gateway-1`)
+    - **Customer Gateway**—Choose the customer gateway in the dropdown which was created earlier (for example, `gcp-customer-gateway-1`)
     - **Local network**—Provide the local subnet for Alibaba (for example, `192.168.1.0/24`)
     - **Remote Network**—Provide the remote subnet for GCP (for example, `172.16.1.0/24`)
     - **Effective Immediately**—Yes
@@ -492,6 +492,43 @@ This section covers the steps of creating an Alibaba IPSec connection with the G
 
 	Note: The tunnel status should eventually indicate Phase 2 of IKE Tunnel 
 Negotiation Succeeded. And from the GCP-side, the VPN tunnel status should transition from Negotiation failure to Established. You may need to refresh the GCP Platform Console page until the Established state appears. If the tunnel status in the Alibaba Cloud management console does not reach Succeeded or the tunnel status on the GCP Platform Console does not reach Established, refer to the Troubleshooting section of this document.
+1. Repeat to create the remaining three tunnels. When you are done, you should have something similar to the following:
+
+**Alibaba Tunnel Name and Gateway Mappings**
+<table>
+	
+<tr>
+<td>VPN Gateway</td>
+<td>Instance ID/Name</td>
+<td>Peer IP Address</td>
+<tr>
+
+<tr>
+<td>alibaba-vpn-gateway-1</td>
+<td>tunnel-vpn-1</td>
+<td>Public IP address of 1st GCP VPN Gateway</td>
+<tr>
+
+<tr>
+<td>alibaba-vpn-gateway-1</td>
+<td>tunnel-vpn-2</td>
+<td>Public IP address of 2nd GCP VPN Gateway</td>
+<tr>
+
+<tr>
+<td>alibaba-vpn-gateway-2</td>
+<td>tunnel-vpn-1</td>
+<td>Public IP address of 1st GCP VPN Gateway</td>
+<tr>
+
+<tr>
+<td>alibaba-vpn-gateway-2</td>
+<td>tunnel-vpn-2</td>
+<td>Public IP address of 2nd GCP VPN Gateway</td>
+<tr>
+	
+</table>
+
 
 ### Configure an Alibaba Cloud Static Route Entry
 Finally, in order to route traffic from the Alibaba Cloud VPC to Google Cloud VPC via the IPsec tunnel, you need to add a custom route entry for the VSwitch subnet. 
