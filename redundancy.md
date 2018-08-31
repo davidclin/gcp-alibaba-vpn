@@ -342,10 +342,9 @@ configure the VPN gateways later.
 ### Configure Route Based IPSec VPN Using Static Routing
 
 #### Configure the VPN gateways
-There are 2 VPN gateways you will need to configure for redundancy.
+Two VPN gateways are needed for redundancy.
 The following steps are for configuring a single VPN gateway.
-Repeat the procedures again in order to configure the second VPN gateway
-using names that do not overlap.
+Repeat the steps twice to get two VPN gateways.
 
 1. In the GCP Console, 
 [go to the VPN page](https://console.cloud.google.com/networking/vpn/list).
@@ -373,7 +372,7 @@ using names that do not overlap.
     for the tunnel. You must enter the same shared secret into both VPN
     gateways. For more information, see
     [Generating a Strong Pre-shared Key](https://cloud.google.com/vpn/docs/how-to/generating-pre-shared-key).
-1. Repeat for the second tunnel using a different name, such as 'vpn-test-tunnel2'
+1. Repeat previous step for the second tunnel and use a different name, such as 'vpn-test-tunnel2'
 1. Under **Routing options**, select the **Route based** or **Policy based** tab.
 1. Populate the following fields:
     -  **Remote network IP range**—The range or ranges of the on-premises network,
@@ -386,8 +385,7 @@ well as forwarding rules for UDP ports 500 and 4500 and for ESP traffic. The VPN
 gateways will not connect until you've configured the on-premises gateway and
 created firewall rules in GCP to allow traffic through the tunnel between the
 Cloud VPN  gateway and the on-premises gateway.
-1. Repeat all steps above to create the second VPN gateway being careful not to
-use names previously used.
+1. Repeat to create the second VPN gateway.
 
 #### Configure firewall rules
 
