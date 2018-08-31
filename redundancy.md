@@ -438,14 +438,16 @@ This section covers the steps of configuring the Alibaba Cloud VSwitch.
 1. Click on **OK** followed by the **Complete** button
 1. Verify the VPC and VSwitch status indicate “Available”
 
-### Create an Alibaba Cloud VPN Gateway
+### Create Alibaba Cloud VPN Gateways
 This section covers the steps of configuring the Alibaba Cloud VPN Gateway.
+The steps below will configure a single Alibaba Cloud VPN Gateway.
+You will need to repeat these steps twice to get two Alibaba Cloud VPN Gateways.
 
 1. Go to **Products > Virtual Private Cloud > VPN Gateways**
 1. Click **Create VPN Gateway**
 1. Configure the following settings:
     - **Region**—Select a region (for example, `US (Silicon Valley)`)
-    - **Name**—Give the VPN Gateway a name (for example, `alibaba-vpn-gateway`)
+    - **Name**—Give the VPN Gateway a name (for example, `alibaba-vpn-gateway-1`)
     - **VPC**—Select the VPC (for example, `alibaba-vpc`)
     - Keep all other values as default
 1. Click **Buy Now**  
@@ -453,16 +455,19 @@ This section covers the steps of configuring the Alibaba Cloud VPN Gateway.
     - Click **Console** and navigate back to **Products > Virtual Private Cloud > VPN Gateways** to verify the status and take note of the IP address as this will be used for GCP-side configuration.
 
 Note: The VPN Gateway will take several minutes to come up and obtain a public IP address. 
+1. Repeat to create the second Alibaba Cloud VPN Gateway and use a different name, such as `alibaba-vpn-gateway-2`.
 
-### Configure an Alibaba Cloud Customer Gateway
+### Configure Alibaba Cloud Customer Gateways
 
 1. Login to the Alibaba Cloud console 
 1. Go to **Products > Virtual Private Cloud > Customer Gateways**
 1. Select **Region** (for example, `US (Silicon Valley)`)then click **Create Customer Gateway**
 1. Complete the following settings:
-    - **Name**—Provide a name to the customer gateway (for example, `gcp-customer-gateway`)
-    - **IP Address**—Provide the Public IP address of GCP (for example, `35.197.191.225`)
+    - **Name**—Provide a name to the customer gateway (for example, `gcp-customer-gateway-1`)
+    - **IP Address**—Provide the Public IP address of GCP customer gateway (for example, `35.197.191.225`)
     - Click **OK**
+1. Repeat to create a second customer gateway using a different name, such as `gcp-customer-gateway-2`
+and provide the IP address of the second GCP customer gateway.
 
 ### Configure an Alibaba Cloud IPSec Connection
 
