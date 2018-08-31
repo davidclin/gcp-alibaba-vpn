@@ -334,7 +334,7 @@ Repeat steps twice to get two VPN gateways.
     Normally, this is the region that contains the instances you want to reach.
     -  **IP address**—Select the 
     [static external IP address](#create-the-gcp-external-ip-address)
-    (for example, `vpn-test-static-ip`) that you created for this gateway
+    (for example, `vpn-test-static-ip-1`) that you created for this gateway
     in the previous section.
 1. Populate the fields for the first tunnel:
     -  **Name**—The name of the VPN tunnel, such as `vpn-gw-1-tunnel1`.
