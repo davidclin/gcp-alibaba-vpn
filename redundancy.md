@@ -426,7 +426,6 @@ You will need to repeat these steps twice to get two Alibaba Cloud VPN Gateways.
 1. Click **Buy Now**  
     - Check on the **VPN Gateway Agreement of Service** checkbox and click the **Activate** button.
     - Click **Console** and navigate back to **Products > Virtual Private Cloud > VPN Gateways** to verify the status and take note of the IP address as this will be used for GCP-side configuration.
-
 Note: The VPN Gateway will take several minutes to come up and obtain a public IP address. 
 1. Repeat to create the second Alibaba Cloud VPN Gateway and use a different name, such as `alibaba-vpn-gateway-2`.
 
