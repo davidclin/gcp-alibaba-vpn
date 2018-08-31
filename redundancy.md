@@ -269,12 +269,11 @@ procedures.
 1. Click **Create VPC network**.
 1. For **Name**, enter a name such as `vpn-vendor-test-network`. Remember
 this name for later.
-1. Under **Subnets, Subnet creation mode**, select the **Custom** tab and
-then populate the following fields:
+1. Under **Subnets, Subnet creation mode**, select the **Custom** tab and then populate the following fields:
 + **Name**—The name for the subnet, such as `vpn-subnet-1`.
 + **Region**—The region that is geographically closest to the
     on-premises gateway, such as  `us-east1`.
-    + **IP address range**—A range such as `172.16.1.0/24`.
++ **IP address range**—A range such as `172.16.1.0/24`.
 1. In the **New subnet** window, click **Done**.
 1. Click **Create**. You're returned to the **VPC networks** page, where it
 takes about a minute for this network and its subnet to appear.
