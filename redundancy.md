@@ -476,7 +476,7 @@ This section covers the steps of creating an Alibaba IPSec connection with the G
 1. Go to **Products > Virtual Private Cloud > IPSec Connections**
 1. Click **Create IPsec Connection**
 1. Complete the following settings:
-    - **Name**—Provide a name to the VPN connection (for example, `tunnel-vpn-1`)
+    - **Name**—Provide a name to the VPN connection (for example, `ali-gw-1-tunnel-1`)
     - **VPN Gateway**—Choose the VPN gateway in the dropdown which was created earlier (for example, `alibaba-vpn-gateway-1`)
     - **Customer Gateway**—Choose the customer gateway in the dropdown which was created earlier (for example, `gcp-customer-gateway-1`)
     - **Local network**—Provide the local subnet for Alibaba (for example, `192.168.1.0/24`)
@@ -498,32 +498,32 @@ Negotiation Succeeded. And from the GCP-side, the VPN tunnel status should trans
 <table>
 	
 <tr>
-<td>VPN Gateway</td>
-<td>Instance ID/Name</td>
-<td>Peer IP Address</td>
+<td><b>VPN Gateway</b></td>
+<td><b>Instance ID/Name</b></td>
+<td><b>Peer IP Address</b></td>
 <tr>
 
 <tr>
 <td>alibaba-vpn-gateway-1</td>
-<td>tunnel-vpn-1</td>
+<td>ali-gw-1-tunnel-1</td>
 <td>Public IP address of 1st GCP VPN Gateway</td>
 <tr>
 
 <tr>
 <td>alibaba-vpn-gateway-1</td>
-<td>tunnel-vpn-2</td>
+<td>ali-gw-1-tunnel-2</td>
 <td>Public IP address of 2nd GCP VPN Gateway</td>
 <tr>
 
 <tr>
 <td>alibaba-vpn-gateway-2</td>
-<td>tunnel-vpn-1</td>
+<td>ali-gw-2-tunnel-1</td>
 <td>Public IP address of 1st GCP VPN Gateway</td>
 <tr>
 
 <tr>
 <td>alibaba-vpn-gateway-2</td>
-<td>tunnel-vpn-2</td>
+<td>ali-gw-2-tunnel-2</td>
 <td>Public IP address of 2nd GCP VPN Gateway</td>
 <tr>
 	
