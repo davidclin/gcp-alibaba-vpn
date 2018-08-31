@@ -217,10 +217,10 @@ IKE Ciphers</a>).</td>
 Below are fields you may be asked to complete for the Alibaba Cloud side configurations. 
 The defaults indicated below will work with the defaults used on the GCP side.
 
--  **Encryption algorithm**—<code>aes</code> (default), aes192, aes256, des, 3des
--  **Integrity algorithm**—<code>sha1</code> (default), md5
--  **Diffie-Hellman group—**—group1, <code>group2</code> (default), group5, group14, group24
--  **Lifetime/SA Life Cycels—**—<code>86400</code> seconds (default)
+-  **Encryption algorithm**—<code>aes</code> 
+-  **Integrity algorithm**—<code>sha1</code>
+-  **Diffie-Hellman group—**—<code>group2</code>
+-  **Lifetime/SA Life Cycels—**—<code>86400</code> seconds 
 
 
 ## Configuration Overview
