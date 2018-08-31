@@ -6,33 +6,6 @@ tags: VPN, interop, alibaba, alibaba cloud vpn gateway, redundancy
 date_published: 2018-08-31
 ---
 
-**BEGIN: HOW TO USE THIS TEMPLATE**
-
-1. Make a copy of this template.
-1. On your local computer, update and add information as indicated. Note:
-    + Fill in the meta information (title, description, author, date_published at the top
-      of this file.
-    + There are notes in the template for you, the author, that explain where you need to
-      make changes. These notes are enclosed in brackets (&lt; &gt;).
-    + The template contains placeholders for things like the vendor and 
-      product name. These are also enclosed in brackets—for example, 
-      every place you see `<vendor-name>` and `<product-name>`, 
-      substitute approriate names.
-    + After you've made appropriate updates, _remove_ bracketed content.
-    + Remove these instructions.
-    + Because this is a template for a variety of setups, it might contain
-      content that isn't releavent to your scenario. Remove (or update)
-      any sections that don't apply to you.
-1. Fork the [GoogleCloudPlatform/community/](https://github.com/GoogleCloudPlatform/community/) repo.
-4. In your fork, add a new folder named `/tutorials/[YOUR_TUTORIAL]`. For the
-   folder name, use hyphens to separate words. We recommend that you 
-   include a product name in the folder name, such as `https-load-balancing-ingix`.
-5. Copy the updated file to the `index.md` file of the new folder.
-6. Create a branch.
-7. Issue a PR to get your new content into the community site.
-   
-<**END: HOW TO USE THIS TEMPLATE**>
-
 # Using Cloud VPN with Alibaba Cloud VPN Gateway with Redundancy
 
 Learn how to build IPsec VPNs between
