@@ -271,12 +271,10 @@ procedures.
 this name for later.
 1. Under **Subnets, Subnet creation mode**, select the **Custom** tab and
 then populate the following fields:
-
 + **Name**—The name for the subnet, such as `vpn-subnet-1`.
 + **Region**—The region that is geographically closest to the
     on-premises gateway, such as  `us-east1`.
 + **IP address range**—A range such as `172.16.1.0/24`.
-
 1. In the **New subnet** window, click **Done**.
 1. Click **Create**. You're returned to the **VPC networks** page, where it
 takes about a minute for this network and its subnet to appear.
@@ -301,7 +299,6 @@ Repeat this process 4 times to get 4 external IP addresses.
 -  **Region**—The region where you want to locate the VPN gateway.
     Normally, this is the region that contains the instances you want to
     reach.
-
 1. Click **Reserve**. You are returned to the **External IP addresses** page.
 After a moment, the page displays the static external IP address that you
 have created.
@@ -470,7 +467,7 @@ Negotiation Succeeded. And from the GCP-side, the VPN tunnel status should trans
 <table>
 	
 <tr>
-<td><b>VPN Gateway</b></td>
+<td><b>VPN Gateway Name</b></td>
 <td><b>Instance ID/Name</b></td>
 <td><b>Peer IP Address</b></td>
 <tr>
