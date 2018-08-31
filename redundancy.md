@@ -317,7 +317,7 @@ configure the VPN gateways later.
 #### Configure the VPN gateways
 Two VPN gateways are needed for redundancy.
 The following steps are for configuring a single VPN gateway.
-Repeat the steps twice to get two VPN gateways.
+Repeat steps twice to get two VPN gateways.
 
 1. In the GCP Console, 
 [go to the VPN page](https://console.cloud.google.com/networking/vpn/list).
@@ -337,7 +337,7 @@ Repeat the steps twice to get two VPN gateways.
     (for example, `vpn-test-static-ip`) that you created for this gateway
     in the previous section.
 1. Populate the fields for the first tunnel:
-    -  **Name**—The name of the VPN tunnel, such as `vpn-test-tunnel1`.
+    -  **Name**—The name of the VPN tunnel, such as `vpn-gw-1-tunnel1`.
     -  **Remote peer IP address**—The public external IP address of the
     on-premises VPN gateway.
     -  **IKE version**—`IKEv2` 
@@ -345,7 +345,7 @@ Repeat the steps twice to get two VPN gateways.
     for the tunnel. You must enter the same shared secret into both VPN
     gateways. For more information, see
     [Generating a Strong Pre-shared Key](https://cloud.google.com/vpn/docs/how-to/generating-pre-shared-key).
-1. Repeat previous step for the second tunnel and use a different name, such as 'vpn-test-tunnel2'
+1. Repeat previous step for the second tunnel and use a different name, such as 'vpn-gw-1-tunnel2'
 1. Under **Routing options**, select the **Route based** or **Policy based** tab.
 1. Populate the following fields:
     -  **Remote network IP range**—The range or ranges of the on-premises network,
