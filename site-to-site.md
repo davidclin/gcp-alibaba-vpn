@@ -198,10 +198,10 @@ settings that are compatible with the GCP side of the network.
 The default Alibaba Cloud VPN Gateway IKE proposal and policy indicated below automatically work with GCP VPN defaults so there
 is nothing you need to do: 
 
--  **Encryption algorithm**—<code>aes</code> (default), aes192, aes256, des, 3des
--  **Integrity algorithm**—<code>sha1</code> (default), md5
--  **Diffie-Hellman group—**—group1, <code>group2</code> (default), group5, group14, group24
--  **Lifetime/SA Life Cycles—**—<code>86400</code> seconds (default)
+-  **Encryption algorithm**—<code>aes</code> 
+-  **Integrity algorithm**—<code>sha1</code> 
+-  **Diffie-Hellman group—**—<code>group2</code>
+-  **Lifetime/SA Life Cycles—**—<code>86400</code> seconds
 
 The following GCP VPN Table is *informational only*.
 
