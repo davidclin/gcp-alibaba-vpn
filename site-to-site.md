@@ -168,8 +168,7 @@ The IP address ranges of the GCP VPC and the Alibaba VPC must not overlap.
 Configuring the Alibaba Cloud side of the VPN network requires you to use IPsec and IKE
 settings that are compatible with the GCP side of the network. 
 
-The default Alibaba Cloud VPN Gateway IKE proposal and policy indicated below automatically work with GCP VPN defaults so there
-is nothing you need to do: 
+The default Alibaba Cloud VPN Gateway IKE proposal and policy indicated below automatically work with GCP VPN defaults:
 
 -  **Encryption algorithm**—<code>aes</code> 
 -  **Integrity algorithm**—<code>sha1</code> 
