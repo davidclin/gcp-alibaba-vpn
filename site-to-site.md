@@ -164,15 +164,10 @@ in the article
 The IP address ranges of the GCP VPC and the Alibaba VPC must not overlap.
 
 ### GCP-compatible settings for IPSec and IKE
-Below are fields you may be asked to complete for the Alibaba Cloud side configurations. 
-The defaults indicated below will work with the defaults used on the GCP side.
-
--  **Encryption algorithm**—<code>aes</code> 
--  **Integrity algorithm**—<code>sha1</code> 
--  **Diffie-Hellman group—**—<code>group2</code>
--  **Lifetime/SA Life Cycles—**—<code>86400</code> seconds
-
-The following GCP VPN Table is *informational only*.
+Configuring the vendor side of the VPN network requires you to use IPsec and IKE
+settings that are compatible with the GCP side of the network. The following
+table lists settings and information about values compatible with GCP VPN.
+Use these settings for the procedures in the subsections that follow.
 
 **GCP VPN Table**
 <table>
@@ -218,6 +213,14 @@ IKE Ciphers</a>).</td>
 </tbody>
 </table>
 
+
+Below are fields you may be asked to complete for the Alibaba Cloud side configurations. 
+The defaults indicated below will work with the defaults used on the GCP side.
+
+-  **Encryption algorithm**—<code>aes</code> 
+-  **Integrity algorithm**—<code>sha1</code> 
+-  **Diffie-Hellman group—**—<code>group2</code>
+-  **Lifetime/SA Life Cycles—**—<code>86400</code> seconds
 
 ## Configuration Overview
 
