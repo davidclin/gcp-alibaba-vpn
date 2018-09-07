@@ -311,8 +311,8 @@ configure the VPN gateways later.
 
 #### Configure the VPN gateways
 Two VPN gateways are needed for redundancy.
-The following steps are for configuring a single VPN gateway.
-Repeat steps twice to get two VPN gateways.
+The following steps are for configuring a single VPN gateway with two tunnels.
+Repeat steps twice to get two VPN gateways each with two tunnels.
 
 1. In the GCP Console, 
 [go to the VPN page](https://console.cloud.google.com/networking/vpn/list).
