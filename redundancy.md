@@ -282,7 +282,7 @@ Two Cloud VPN gateways on the GCP side are needed for redudancy.
 
 The following procedure configures one external IP address for the first Cloud VPN gateway. 
 
-Repeat the procedure to create a second external IP address for the second Cloud VPN gateway.
+Repeat procedure to create a second external IP address for the second Cloud VPN gateway.
 
 1.  In the GCP Console,
 [go to the External IP addresses page](https://pantheon.corp.google.com/networking/addresses/list).
@@ -301,14 +301,14 @@ have created.
 1. Make a note of the IP address that is created so that you can use it to
 configure the VPN gateways later.
 
-1. Repeat steps again using a different name, such as `vpn-test-static-ip-2`.
+1. Repeat steps using a different name, such as `vpn-test-static-ip-2`.
 
 ### Configure Route Based IPSec VPN Using Static Routing
 
 #### Configure the VPN gateways
 Two VPN gateways are needed for redundancy.
-The following steps are for configuring a single VPN gateway with two tunnels.
-Repeat steps twice to get two VPN gateways each with two tunnels.
+The following procedure configures the first VPN gateway with two tunnels.
+Repeat procedure to configure the second VPN gateway with two tunnels.
 
 1. In the GCP Console, 
 [go to the VPN page](https://console.cloud.google.com/networking/vpn/list).
