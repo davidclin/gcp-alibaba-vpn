@@ -281,6 +281,7 @@ takes about a minute for this network and its subnet to appear.
 Two Cloud VPN gateways on the GCP side are needed for redudancy.
 
 The following procedure configures one external IP address for the first Cloud VPN gateway. 
+
 Repeat the procedure to create a second external IP address for the second Cloud VPN gateway.
 
 1.  In the GCP Console,
