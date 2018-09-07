@@ -511,7 +511,7 @@ Note:
 Multiple static route entries to the same prefix with different VPN Gateways is not supported.
 
 2) When forwarding egress traffic, the selected VPN Gateway performs equal cost load balancing across both its tunnels.
-Tunnel prioritization is not supported. In other words, both tunnels are always utilized for forwarding egress traffic.
+Tunnel prioritization is not supported. In other words, both tunnels are always utilized for forwarding egress traffic on the selected VPN Gateway.
 
 ### Testing the configuration
 
