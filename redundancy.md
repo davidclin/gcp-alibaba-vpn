@@ -501,10 +501,17 @@ Finally, in order to route traffic from the Alibaba Cloud VPC to Google Cloud VP
 1. Click **Add Route Entry**
 1. Configure the following route settings:
     - **Destination CIDR Block** – The destination Subnet (e.g. 172.16.1.0/24) 
-    - **Next Hop Type Type** – VPN Gateway
+    - **Next Hop Type** – VPN Gateway
     - **VPN Gateway** – The VPN Gateway created earlier (e.g. alibaba-vpn-gateway)
 1. Click **OK**
 
+Note:
+
+1) When adding a static route entry, only one VPN Gateway can be selected. 
+Multiple static route entries to the same prefix with different VPN Gateways is not supported.
+
+2) When forwarding egress traffic, the selected VPN Gateway performs equal cost load balancing across both its tunnels.
+Tunnel prioritization is not supported. In other words, both tunnels are always utilized for forwarding egress traffic.
 
 ### Testing the configuration
 
