@@ -219,8 +219,8 @@ The defaults indicated below will work with the defaults used on the GCP side.
 
 -  **Encryption algorithm**—<code>aes</code> 
 -  **Integrity algorithm**—<code>sha1</code> 
--  **Diffie-Hellman group—**—<code>group2</code>
--  **Lifetime/SA Life Cycles—**—<code>86400</code> seconds
+-  **Diffie-Hellman group—**<code>group2</code>
+-  **Lifetime/SA Life Cycles—**<code>86400</code> seconds
 
 ## Configuration Overview
 
