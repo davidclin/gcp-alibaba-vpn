@@ -349,7 +349,7 @@ well as forwarding rules for UDP ports 500 and 4500 and for ESP traffic. The VPN
 gateways will not connect until you've configured the on-premises gateway and
 created firewall rules in GCP to allow traffic through the tunnel between the
 Cloud VPN  gateway and the on-premises gateway.
-1. Repeat to create the second VPN gateway.
+1. Repeat all steps above to create the second VPN gateway with two tunnels.
 
 #### Configure firewall rules
 
