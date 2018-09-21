@@ -368,7 +368,7 @@ Specify **VPN tunnel** allows you to select an existing Cloud VPN tunnel as a ne
 
 **Important**: You cannot edit or update a route after you create it. To modify a custom static route, you must delete it and create a replacement.
 
-#### Configure firewall rules
+### Configure firewall rules
 
 Next, you configure GCP firewall rules to allow inbound traffic from the
 on-premises network subnets. You must also configure the on-premises network
