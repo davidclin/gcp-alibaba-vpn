@@ -352,7 +352,7 @@ created firewall rules in GCP to allow traffic through the tunnel between the
 Cloud VPN  gateway and the on-premises gateway.
 1. Repeat all steps above to create the second VPN gateway with two tunnels.
 
-#### Configure Custom Static Routes with Route Prioritization
+### Configure Custom Static Routes with Route Prioritization
 
 1. In the GCP Console, [go to the GCP Routes page](https://console.cloud.google.com/networking/routes)
 2. Click **Create route**
