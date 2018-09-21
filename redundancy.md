@@ -366,11 +366,11 @@ For example, a route with a priority value of 100 will have higher priority than
 3. Specify a **Name** and a **Description** for the route.
 4. Select an existing **Network** where the route will apply.
 5. Specify a **Destination IP range** to define the destination of the route.
-6. Specify a **Priority** for the route. A priority is only used to to determine routing order if routes have equivalent destinations. See [static route parameters](https://cloud.google.com/vpc/docs/routes#individualroutes) for more details. 
+6. Specify a **Priority** for the route. A priority is only used to to determine routing order if routes have equivalent destinations. 
 7. Leave the field blank to make the route applicable to all instances in the network. To make the route applicable only to select instances with matching network tags, specify those in the Instance tags field.
 8. Select a **Next hop** for the route. **VPN tunnel** allows you to select an existing Cloud VPN tunnel as a next hop. 
 9. Click **Create**
-10. Repeat steps for remaining 3 static routes that will result with a primary tunnel on each VPN gateway.
+10. Repeat steps for remaining VPN tunnels.
 
 **Important**: You cannot edit or update a route after you create it. To modify a custom static route, you must delete it and create a replacement.
 
