@@ -32,7 +32,7 @@ Alibaba Cloud VPN Gateway with redundancy
     - [Configure route-based IPsec VPN using static routing](#configure-route-based-ipsec-vpn-using-static-routing)
         - [Configure the VPN gateways](#configure-the-vpn-gateways)
 	- [Configure Custom Static Routes with Route Prioritization](#configure-custom-static-routes-with-route-prioritization)
-        - [Configure firewall rules](#configure-firewall-rules)
+    - [Configure firewall rules](#configure-firewall-rules)
 - [Configure the Alibaba Cloud side](#configure-the-alibaba-cloud-side)
     - [Create an Alibaba Cloud VPC](#create-an-alibaba-cloud-vpc)
     - [Create an Alibaba Cloud VSwitch](#create-an-alibaba-cloud-vswitch)
@@ -352,7 +352,7 @@ created firewall rules in GCP to allow traffic through the tunnel between the
 Cloud VPN  gateway and the on-premises gateway.
 1. Repeat all steps above to create the second VPN gateway with two tunnels.
 
-### Configure Custom Static Routes with Route Prioritization
+#### Configure Custom Static Routes with Route Prioritization
 
 1. In the GCP Console, [go to the GCP Routes page](https://console.cloud.google.com/networking/routes)
 2. Click **Create route**
